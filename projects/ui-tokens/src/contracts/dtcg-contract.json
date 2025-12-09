@@ -1,0 +1,248 @@
+{
+  "$schema": "https://tr.designtokens.org/format/dtcg-2.0.json",
+  "color": {
+    "$type": "color",
+    "brand": {
+      "$description": "Cor principal da marca",
+      "$value": "#0055FF"
+    },
+    "brand-hover": {
+      "$description": "Cor da marca em hover",
+      "$value": "#0044CC"
+    },
+    "brand-active": {
+      "$description": "Cor da marca quando ativo",
+      "$value": "#003399"
+    },
+    "text": {
+      "primary": {
+        "$description": "Cor principal do texto",
+        "$value": "#0B0B0B"
+      },
+      "secondary": {
+        "$description": "Cor secundária do texto",
+        "$value": "#666666"
+      },
+      "tertiary": {
+        "$description": "Cor terciária do texto",
+        "$value": "#999999"
+      },
+      "inverse": {
+        "$description": "Texto em fundo escuro",
+        "$value": "#FFFFFF"
+      }
+    },
+    "bg": {
+      "base": {
+        "$description": "Fundo base da aplicação",
+        "$value": "#F8F9FA"
+      },
+      "surface": {
+        "$description": "Fundo de cards e superfícies",
+        "$value": "#FFFFFF"
+      },
+      "secondary": {
+        "$description": "Fundo secundário",
+        "$value": "#F5F5F5"
+      }
+    },
+    "border": {
+      "$description": "Cor das bordas",
+      "$value": "#E0E0E0"
+    },
+    "success": {
+      "$description": "Cor de sucesso",
+      "$value": "#28A745"
+    },
+    "warning": {
+      "$description": "Cor de aviso",
+      "$value": "#FFC107"
+    },
+    "error": {
+      "$description": "Cor de erro",
+      "$value": "#DC3545"
+    },
+    "info": {
+      "$description": "Cor de informação",
+      "$value": "#17A2B8"
+    }
+  },
+  "spacing": {
+    "$type": "dimension",
+    "xs": {
+      "$description": "Espaçamento extra pequeno",
+      "$value": "4px"
+    },
+    "sm": {
+      "$description": "Espaçamento pequeno",
+      "$value": "8px"
+    },
+    "md": {
+      "$description": "Espaçamento médio",
+      "$value": "16px"
+    },
+    "lg": {
+      "$description": "Espaçamento grande",
+      "$value": "24px"
+    },
+    "xl": {
+      "$description": "Espaçamento extra grande",
+      "$value": "32px"
+    },
+    "2xl": {
+      "$description": "Espaçamento 2x extra grande",
+      "$value": "48px"
+    }
+  },
+  "radius": {
+    "$type": "dimension",
+    "sm": {
+      "$description": "Borda arredondada pequena",
+      "$value": "4px"
+    },
+    "md": {
+      "$description": "Borda arredondada média",
+      "$value": "8px"
+    },
+    "lg": {
+      "$description": "Borda arredondada grande",
+      "$value": "12px"
+    },
+    "xl": {
+      "$description": "Borda arredondada extra grande",
+      "$value": "16px"
+    },
+    "full": {
+      "$description": "Borda completamente arredondada",
+      "$value": "9999px"
+    }
+  },
+  "shadow": {
+    "$type": "shadow",
+    "sm": {
+      "$description": "Sombra pequena",
+      "$value": {
+        "offsetX": "0px",
+        "offsetY": "1px",
+        "blur": "3px",
+        "spread": "0px",
+        "color": "rgba(0, 0, 0, 0.1)"
+      }
+    },
+    "md": {
+      "$description": "Sombra média",
+      "$value": {
+        "offsetX": "0px",
+        "offsetY": "4px",
+        "blur": "6px",
+        "spread": "0px",
+        "color": "rgba(0, 0, 0, 0.1)"
+      }
+    },
+    "lg": {
+      "$description": "Sombra grande",
+      "$value": {
+        "offsetX": "0px",
+        "offsetY": "10px",
+        "blur": "15px",
+        "spread": "-3px",
+        "color": "rgba(0, 0, 0, 0.1)"
+      }
+    }
+  },
+  "font": {
+    "$type": "fontFamily",
+    "sans": {
+      "$description": "Fonte sans-serif padrão",
+      "$value": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"
+    },
+    "mono": {
+      "$description": "Fonte monospace",
+      "$value": "'Courier New', Courier, monospace"
+    }
+  },
+  "fontSize": {
+    "$type": "dimension",
+    "xs": {
+      "$description": "Tamanho de fonte extra pequeno",
+      "$value": "12px"
+    },
+    "sm": {
+      "$description": "Tamanho de fonte pequeno",
+      "$value": "14px"
+    },
+    "md": {
+      "$description": "Tamanho de fonte médio",
+      "$value": "16px"
+    },
+    "lg": {
+      "$description": "Tamanho de fonte grande",
+      "$value": "18px"
+    },
+    "xl": {
+      "$description": "Tamanho de fonte extra grande",
+      "$value": "20px"
+    },
+    "2xl": {
+      "$description": "Tamanho de fonte 2x extra grande",
+      "$value": "24px"
+    },
+    "3xl": {
+      "$description": "Tamanho de fonte 3x extra grande",
+      "$value": "30px"
+    },
+    "4xl": {
+      "$description": "Tamanho de fonte 4x extra grande",
+      "$value": "36px"
+    }
+  },
+  "fontWeight": {
+    "$type": "fontWeight",
+    "normal": {
+      "$description": "Peso normal",
+      "$value": "400"
+    },
+    "medium": {
+      "$description": "Peso médio",
+      "$value": "500"
+    },
+    "semibold": {
+      "$description": "Peso semi-negrito",
+      "$value": "600"
+    },
+    "bold": {
+      "$description": "Peso negrito",
+      "$value": "700"
+    }
+  },
+  "lineHeight": {
+    "$type": "number",
+    "tight": {
+      "$description": "Altura de linha apertada",
+      "$value": 1.25
+    },
+    "normal": {
+      "$description": "Altura de linha normal",
+      "$value": 1.5
+    },
+    "relaxed": {
+      "$description": "Altura de linha relaxada",
+      "$value": 1.75
+    }
+  },
+  "transition": {
+    "$type": "duration",
+    "fast": {
+      "$description": "Transição rápida",
+      "$value": "150ms"
+    },
+    "normal": {
+      "$description": "Transição normal",
+      "$value": "250ms"
+    },
+    "slow": {
+      "$description": "Transição lenta",
+      "$value": "350ms"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "@superapp/ui-tokens",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "tokens:check": "node scripts/check-contract.js",
+    "tokens:build": "node scripts/build-brand-css.js",
+    "tokens:all": "npm run tokens:check && npm run tokens:build"
+  },
+  "peerDependencies": {
+    "@angular/common": "^19.0.0",
+    "@angular/core": "^19.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0",
+    "rxjs": "~7.8.0"
+  },
+  "sideEffects": false
+}

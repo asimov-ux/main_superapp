@@ -1,0 +1,15 @@
+:root[data-brand="acme"] {
+  --colors-primary: #3366FF;
+  --colors-secondary: #FFCC00;
+  --colors-background: #FFFFFF;
+  --colors-surface: #F3F3F3;
+  --typography-fontFamily: Arial, sans-serif;
+  --typography-size-sm: 12px;
+  --typography-size-md: 16px;
+  --typography-size-lg: 20px;
+  --elevation-lg: 0 4px 8px rgba(0,0,0,0.15);
+  --motion-duration-fast: 120ms;
+  --motion-duration-base: 160ms;
+  --motion-duration-slow: 240ms;
+  --density-mode: comfortable;
+}

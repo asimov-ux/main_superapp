@@ -1,0 +1,10 @@
+.people-list {
+  padding: 1rem;
+  .card {
+    padding: 0.75rem;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    box-shadow: var(--properties-elevation-lg, 0 2px 4px rgba(0,0,0,0.06));
+  }
+}

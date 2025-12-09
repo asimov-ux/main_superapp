@@ -1,0 +1,60 @@
+{
+  "$schema": "../dtcg-contract.json",
+  "brand": {
+    "id": "acme-dark",
+    "name": "ACME Corporation - Dark Theme",
+    "version": "1.0.0",
+    "signature": ""
+  },
+  "color": {
+    "brand": {
+      "$value": "#3B82F6"
+    },
+    "brand-hover": {
+      "$value": "#60A5FA"
+    },
+    "brand-active": {
+      "$value": "#2563EB"
+    },
+    "text": {
+      "primary": {
+        "$value": "#F9FAFB"
+      },
+      "secondary": {
+        "$value": "#D1D5DB"
+      },
+      "tertiary": {
+        "$value": "#9CA3AF"
+      },
+      "inverse": {
+        "$value": "#111827"
+      }
+    },
+    "bg": {
+      "base": {
+        "$value": "#111827"
+      },
+      "surface": {
+        "$value": "#1F2937"
+      },
+      "secondary": {
+        "$value": "#374151"
+      }
+    },
+    "border": {
+      "$value": "#4B5563"
+    },
+    "success": {
+      "$value": "#10B981"
+    },
+    "warning": {
+      "$value": "#F59E0B"
+    },
+    "error": {
+      "$value": "#EF4444"
+    },
+    "info": {
+      "$value": "#3B82F6"
+    }
+  }
+}

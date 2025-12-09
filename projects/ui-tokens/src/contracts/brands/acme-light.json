@@ -1,0 +1,60 @@
+{
+  "$schema": "../dtcg-contract.json",
+  "brand": {
+    "id": "acme-light",
+    "name": "ACME Corporation - Light Theme",
+    "version": "1.0.0",
+    "signature": ""
+  },
+  "color": {
+    "brand": {
+      "$value": "#0055FF"
+    },
+    "brand-hover": {
+      "$value": "#0044CC"
+    },
+    "brand-active": {
+      "$value": "#003399"
+    },
+    "text": {
+      "primary": {
+        "$value": "#0B0B0B"
+      },
+      "secondary": {
+        "$value": "#666666"
+      },
+      "tertiary": {
+        "$value": "#999999"
+      },
+      "inverse": {
+        "$value": "#FFFFFF"
+      }
+    },
+    "bg": {
+      "base": {
+        "$value": "#F8F9FA"
+      },
+      "surface": {
+        "$value": "#FFFFFF"
+      },
+      "secondary": {
+        "$value": "#F5F5F5"
+      }
+    },
+    "border": {
+      "$value": "#E0E0E0"
+    },
+    "success": {
+      "$value": "#28A745"
+    },
+    "warning": {
+      "$value": "#FFC107"
+    },
+    "error": {
+      "$value": "#DC3545"
+    },
+    "info": {
+      "$value": "#17A2B8"
+    }
+  }
+}

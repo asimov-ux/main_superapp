@@ -1,0 +1,23 @@
+/**
+ * ACME Corporation - Light Theme
+ * Version: 1.0.0
+ * Generated: 2025-12-05T17:23:45.108Z
+ */
+
+:root {
+  --color-brand: #0055FF;
+  --color-brand-hover: #0044CC;
+  --color-brand-active: #003399;
+  --color-text-primary: #0B0B0B;
+  --color-text-secondary: #666666;
+  --color-text-tertiary: #999999;
+  --color-text-inverse: #FFFFFF;
+  --color-bg-base: #F8F9FA;
+  --color-bg-surface: #FFFFFF;
+  --color-bg-secondary: #F5F5F5;
+  --color-border: #E0E0E0;
+  --color-success: #28A745;
+  --color-warning: #FFC107;
+  --color-error: #DC3545;
+  --color-info: #17A2B8;
+}

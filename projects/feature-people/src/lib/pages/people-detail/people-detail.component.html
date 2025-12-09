@@ -1,0 +1,12 @@
+<div class="people-detail">
+  <h2>Detalhe</h2>
+  <form [formGroup]="form" (ngSubmit)="save()">
+    <label>Nome</label>
+    <input formControlName="nome" />
+    <label>Email</label>
+    <input formControlName="email" />
+    <label>Telefone</label>
+    <input formControlName="telefone" />
+    <button type="submit">Salvar</button>
+  </form>
+</div>

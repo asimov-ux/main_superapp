@@ -1,0 +1,46 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "outDir": "./dist/out-tsc",
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "declaration": false,
+    "experimentalDecorators": true,
+    "moduleResolution": "bundler",
+    "importHelpers": true,
+    "target": "ES2022",
+    "module": "ES2022",
+    "lib": ["ES2022", "dom"],
+    "baseUrl": "./",
+    "paths": {
+      "@superapp/ui-tokens": ["projects/ui-tokens/src/public-api.ts"],
+      "@superapp/ui-widgets": ["projects/ui-widgets/src/public-api.ts"],
+      "@superapp/core": ["projects/core/src/public-api.ts"],
+      "@superapp/feature-beneficios": [
+        "projects/feature-beneficios/src/public-api.ts"
+      ],
+
+      /** >>> CORREÇÃO AQUI <<< **/
+      "@superapp/feature-people": [
+        "dist/feature-people"
+      ],
+      "feature-dashboard": [
+        "./dist/feature-dashboard"
+      ]
+    }
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
+  }
+}

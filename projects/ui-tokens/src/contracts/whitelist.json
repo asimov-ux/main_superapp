@@ -1,0 +1,26 @@
+{
+  "allowedBrands": [
+    {
+      "id": "cef-light",
+      "name": "Caixa Econômica Federal",
+      "version": "1.0.0",
+      "enabled": true,
+      "requiresSignature": false
+    },
+    {
+      "id": "acme-light",
+      "name": "ACME Light",
+      "version": "1.0.0",
+      "enabled": true,
+      "requiresSignature": false
+    },
+    {
+      "id": "acme-dark",
+      "name": "ACME Dark",
+      "version": "1.0.0",
+      "enabled": true,
+      "requiresSignature": false
+    }
+  ],
+  "defaultBrand": "cef-light"
+}

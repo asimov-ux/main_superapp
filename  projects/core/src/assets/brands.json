@@ -1,0 +1,57 @@
+{
+  "version": "1.1.0",
+  "signature": "sha256-example-signature-hash",
+  "timestamp": "2025-12-03T00:00:00.000Z",
+  "brands": [
+    {
+      "id": "default",
+      "name": "default",
+      "displayName": "Default Theme",
+      "contractVersion": "1.1.0",
+      "cssUrl": "/assets/tokens/default.css",
+      "integrity": "sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC",
+      "enabled": true,
+      "preload": true,
+      "metadata": {
+        "description": "Default brand theme",
+        "author": "Superapp Team",
+        "updatedAt": "2025-12-03"
+      }
+    },
+    {
+      "id": "brand-a",
+      "name": "brand-a",
+      "displayName": "Brand A",
+      "contractVersion": "1.1.0",
+      "cssUrl": "/assets/tokens/brand-a.css",
+      "integrity": "sha384-example-hash-brand-a",
+      "enabled": true,
+      "preload": false,
+      "metadata": {
+        "description": "Brand A custom theme",
+        "author": "Brand A Team",
+        "updatedAt": "2025-12-03"
+      }
+    },
+    {
+      "id": "brand-b",
+      "name": "brand-b",
+      "displayName": "Brand B",
+      "contractVersion": "1.1.0",
+      "cssUrl": "/assets/tokens/brand-b.css",
+      "integrity": "sha384-example-hash-brand-b",
+      "enabled": true,
+      "preload": false
+    },
+    {
+      "id": "brand-c",
+      "name": "brand-c",
+      "displayName": "Brand C",
+      "contractVersion": "1.1.0",
+      "cssUrl": "/assets/tokens/brand-c.css",
+      "integrity": "sha384-example-hash-brand-c",
+      "enabled": false,
+      "preload": false
+    }
+  ]
+}

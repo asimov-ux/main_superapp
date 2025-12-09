@@ -1,0 +1,14 @@
+<div class="people-list">
+  <h2>People</h2>
+  <div *ngIf="store.loading() ">Carregando...</div>
+  <div *ngIf="store.error()">{{ store.error() }}</div>
+
+  <ul>
+    <li *ngFor="let p of store.peopleList()">
+      <div class="card" (click)="goDetail(p.id)">
+        <strong>{{ p.nome }}</strong>
+        <div>{{ p.cargo }} • {{ p.unidade }}</div>
+      </div>
+    </li>
+  </ul>
+</div>

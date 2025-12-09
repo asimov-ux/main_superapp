@@ -1,0 +1,33 @@
+{
+  "items": [
+    {
+      "id": "1",
+      "nome": "João Silva",
+      "cargo": "Analista",
+      "unidade": "Agência Central",
+      "ativo": true
+    },
+    {
+      "id": "2",
+      "nome": "Maria Oliveira",
+      "cargo": "Gerente",
+      "unidade": "Superintendência",
+      "ativo": true
+    },
+    {
+      "id": "3",
+      "nome": "Carlos Santos",
+      "cargo": "Coordenador",
+      "unidade": "Filial Norte",
+      "ativo": true
+    },
+    {
+      "id": "4",
+      "nome": "Ana Costa",
+      "cargo": "Assistente",
+      "unidade": "Agência Sul",
+      "ativo": false
+    }
+  ],
+  "total": 4
+}
