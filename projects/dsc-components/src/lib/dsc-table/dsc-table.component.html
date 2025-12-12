@@ -1,0 +1,152 @@
+<div class="dsc-table">
+  <div class="dsc-table__container" [style.max-height]="tableMaxHeight">
+    <table class="dsc-table__element">
+      <thead class="dsc-table__header">
+        <tr>
+          <!-- Selector column -->
+          <th
+            *ngIf="selectorType !== 'none'"
+            class="dsc-table__cell dsc-table__cell--selector"
+          >
+            <input
+              *ngIf="selectorType === 'checkbox'"
+              type="checkbox"
+              [checked]="isAllSelected()"
+              (change)="toggleSelectAll()"
+              aria-label="Selecionar todos"
+              title="Selecionar todos"
+            />
+          </th>
+
+          <!-- Expandable column -->
+          <th
+            *ngIf="expandable"
+            class="dsc-table__cell dsc-table__cell--expand"
+          ></th>
+
+          <!-- Data columns -->
+          <th
+            *ngFor="let column of columns"
+            class="dsc-table__cell dsc-table__cell--header"
+            [class.dsc-table__cell--sortable]="column.sortable"
+            [style.width]="column.width"
+            (click)="sortByColumn(column)"
+          >
+            <div class="dsc-table__header-content">
+              {{ column.header }}
+
+              <span
+                *ngIf="column.sortable"
+                class="material-icons dsc-table__sort-icon"
+              >
+                <ng-container *ngIf="sortColumn === column.field">
+                  {{
+                    sortDirection === 'asc' ? 'arrow_upward' : 'arrow_downward'
+                  }}
+                </ng-container>
+                <ng-container *ngIf="sortColumn !== column.field">
+                  unfold_more
+                </ng-container>
+              </span>
+            </div>
+          </th>
+        </tr>
+      </thead>
+
+      <tbody class="dsc-table__body">
+        <ng-container *ngFor="let row of displayedData; let i = index">
+          <!-- Main row -->
+          <tr
+            class="dsc-table__row"
+            [class.dsc-table__row--selected]="isSelected(row)"
+            [class.dsc-table__row--expanded]="isExpanded(row)"
+            [style.height]="tableRowHeight"
+          >
+            <!-- Selector cell -->
+            <td
+              *ngIf="selectorType !== 'none'"
+              class="dsc-table__cell dsc-table__cell--selector"
+            >
+              <input
+                [type]="selectorType"
+                [name]="selectorType === 'radio' ? 'table-radio' : undefined"
+                [checked]="isSelected(row)"
+                (change)="toggleSelection(row)"
+                title="Selecionar linha"
+                [attr.aria-label]="'Selecionar linha ' + (i + 1)"
+              />
+            </td>
+
+            <!-- Expand cell -->
+            <td
+              *ngIf="expandable"
+              class="dsc-table__cell dsc-table__cell--expand"
+            >
+              <button
+                class="dsc-table__expand-button"
+                (click)="toggleRowExpansion(row)"
+                [attr.aria-label]="isExpanded(row) ? 'Recolher' : 'Expandir'"
+              >
+                <span class="material-icons">
+                  {{ isExpanded(row) ? 'expand_less' : 'expand_more' }}
+                </span>
+              </button>
+            </td>
+
+            <!-- Data cells -->
+            <td *ngFor="let column of columns" class="dsc-table__cell">
+              {{ getCellValue(row, column.field) }}
+            </td>
+          </tr>
+
+          <!-- Expanded detail row -->
+          <tr
+            *ngIf="expandable && isExpanded(row)"
+            class="dsc-table__row-expanded"
+          >
+            <td
+              [attr.colspan]="
+                columns.length +
+                (selectorType !== 'none' ? 1 : 0) +
+                (expandable ? 1 : 0)
+              "
+            >
+              <div class="dsc-table__expanded-content">
+                <ng-container
+                  *ngIf="expandedDetailTemplate || expandedDetailRef"
+                >
+                  <ng-container
+                    *ngTemplateOutlet="
+                      (expandedDetailTemplate || expandedDetailRef)!;
+                      context: { $implicit: row }
+                    "
+                  >
+                  </ng-container>
+                </ng-container>
+                <div
+                  *ngIf="!expandedDetailTemplate && !expandedDetailRef"
+                  class="dsc-table__no-template"
+                >
+                  Conteúdo expandido não definido
+                </div>
+              </div>
+            </td>
+          </tr>
+        </ng-container>
+
+        <!-- Empty state -->
+        <tr *ngIf="displayedData.length === 0" class="dsc-table__row-empty">
+          <td
+            [attr.colspan]="
+              columns.length +
+              (selectorType !== 'none' ? 1 : 0) +
+              (expandable ? 1 : 0)
+            "
+          >
+            <div class="dsc-table__empty-message">Sem dados</div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

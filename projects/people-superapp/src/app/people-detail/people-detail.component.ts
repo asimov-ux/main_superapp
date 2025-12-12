@@ -9,10 +9,10 @@ import { PeopleService, Person } from '../services/people.service';
   imports: [CommonModule, RouterLink],
   template: `
     <div class="detail-container">
-      <div *ngIf="loading" class="loading">🔄 Carregando detalhes...</div>
+      <div *ngIf="loading" class="loading">Carregando detalhes...</div>
 
       <div *ngIf="error" class="error">
-        <h2>❌ Erro</h2>
+        <h2>Erro</h2>
         <p>{{ error }}</p>
         <button class="btn-back" routerLink="/people">
           ← Voltar para listagem
@@ -20,7 +20,7 @@ import { PeopleService, Person } from '../services/people.service';
       </div>
 
       <div *ngIf="!loading && !error && !person" class="not-found">
-        <h2>🔍 Pessoa não encontrada</h2>
+        <h2>Pessoa não encontrada</h2>
         <p>O ID "{{ personId }}" não existe no sistema.</p>
         <button class="btn-back" routerLink="/people">
           ← Voltar para listagem
@@ -41,7 +41,7 @@ import { PeopleService, Person } from '../services/people.service';
               [class.active]="person.ativo"
               [class.inactive]="!person.ativo"
             >
-              {{ person.ativo ? '✅ Ativo' : '❌ Inativo' }}
+              {{ person.ativo ? 'Ativo' : 'Inativo' }}
             </span>
           </div>
 
@@ -76,7 +76,7 @@ import { PeopleService, Person } from '../services/people.service';
 
           <div class="card-footer">
             <button class="btn-secondary" routerLink="/people">Cancelar</button>
-            <button class="btn-primary" (click)="onEdit()">✏️ Editar</button>
+            <button class="btn-primary" (click)="onEdit()">Editar</button>
           </div>
         </div>
       </div>

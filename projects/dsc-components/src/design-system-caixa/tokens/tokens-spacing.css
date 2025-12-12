@@ -1,0 +1,237 @@
+/* ===========================================
+   DESIGN SYSTEM CAIXA - TOKENS DE ESPAÇAMENTO
+   =========================================== */
+
+:root {
+  /* Espaçamentos baseados em múltiplos de 4 (até 16px) e 8 (acima de 16px) */
+  --spacing-none: 0px;
+  --spacing-quark: 4px;
+  --spacing-nano: 8px;
+  --spacing-micro: 12px;
+  --spacing-tiny: 16px;
+  --spacing-smaller: 24px;
+  --spacing-small: 32px;
+  --spacing-medium: 40px;
+  --spacing-large: 48px;
+  --spacing-larger: 56px;
+  --spacing-big: 64px;
+  --spacing-bigger: 72px;
+  --spacing-huge: 80px;
+  --spacing-giant: 120px;
+  --spacing-enormous: 160px;
+
+  /* Equivalente em REM (base 16px) */
+  --spacing-none-rem: 0rem;
+  --spacing-quark-rem: 0.25rem;
+  --spacing-nano-rem: 0.5rem;
+  --spacing-micro-rem: 0.75rem;
+  --spacing-tiny-rem: 1rem;
+  --spacing-smaller-rem: 1.5rem;
+  --spacing-small-rem: 2rem;
+  --spacing-medium-rem: 2.5rem;
+  --spacing-large-rem: 3rem;
+  --spacing-larger-rem: 3.5rem;
+  --spacing-big-rem: 4rem;
+  --spacing-bigger-rem: 4.5rem;
+  --spacing-huge-rem: 5rem;
+  --spacing-giant-rem: 7.5rem;
+  --spacing-enormous-rem: 10rem;
+}
+
+/* Classes utilitárias de margin */
+.m-none {
+  margin: var(--spacing-none);
+}
+.m-quark {
+  margin: var(--spacing-quark);
+}
+.m-nano {
+  margin: var(--spacing-nano);
+}
+.m-micro {
+  margin: var(--spacing-micro);
+}
+.m-tiny {
+  margin: var(--spacing-tiny);
+}
+.m-smaller {
+  margin: var(--spacing-smaller);
+}
+.m-small {
+  margin: var(--spacing-small);
+}
+.m-medium {
+  margin: var(--spacing-medium);
+}
+.m-large {
+  margin: var(--spacing-large);
+}
+.m-larger {
+  margin: var(--spacing-larger);
+}
+.m-big {
+  margin: var(--spacing-big);
+}
+.m-bigger {
+  margin: var(--spacing-bigger);
+}
+.m-huge {
+  margin: var(--spacing-huge);
+}
+.m-giant {
+  margin: var(--spacing-giant);
+}
+.m-enormous {
+  margin: var(--spacing-enormous);
+}
+
+/* Margin top */
+.mt-none {
+  margin-top: var(--spacing-none);
+}
+.mt-quark {
+  margin-top: var(--spacing-quark);
+}
+.mt-nano {
+  margin-top: var(--spacing-nano);
+}
+.mt-micro {
+  margin-top: var(--spacing-micro);
+}
+.mt-tiny {
+  margin-top: var(--spacing-tiny);
+}
+.mt-smaller {
+  margin-top: var(--spacing-smaller);
+}
+.mt-small {
+  margin-top: var(--spacing-small);
+}
+.mt-medium {
+  margin-top: var(--spacing-medium);
+}
+.mt-large {
+  margin-top: var(--spacing-large);
+}
+.mt-larger {
+  margin-top: var(--spacing-larger);
+}
+.mt-big {
+  margin-top: var(--spacing-big);
+}
+.mt-bigger {
+  margin-top: var(--spacing-bigger);
+}
+.mt-huge {
+  margin-top: var(--spacing-huge);
+}
+.mt-giant {
+  margin-top: var(--spacing-giant);
+}
+.mt-enormous {
+  margin-top: var(--spacing-enormous);
+}
+
+/* Classes utilitárias de padding */
+.p-none {
+  padding: var(--spacing-none);
+}
+.p-quark {
+  padding: var(--spacing-quark);
+}
+.p-nano {
+  padding: var(--spacing-nano);
+}
+.p-micro {
+  padding: var(--spacing-micro);
+}
+.p-tiny {
+  padding: var(--spacing-tiny);
+}
+.p-smaller {
+  padding: var(--spacing-smaller);
+}
+.p-small {
+  padding: var(--spacing-small);
+}
+.p-medium {
+  padding: var(--spacing-medium);
+}
+.p-large {
+  padding: var(--spacing-large);
+}
+.p-larger {
+  padding: var(--spacing-larger);
+}
+.p-big {
+  padding: var(--spacing-big);
+}
+.p-bigger {
+  padding: var(--spacing-bigger);
+}
+.p-huge {
+  padding: var(--spacing-huge);
+}
+.p-giant {
+  padding: var(--spacing-giant);
+}
+.p-enormous {
+  padding: var(--spacing-enormous);
+}
+
+/* Padding vertical e horizontal */
+.px-none {
+  padding-left: var(--spacing-none);
+  padding-right: var(--spacing-none);
+}
+.py-none {
+  padding-top: var(--spacing-none);
+  padding-bottom: var(--spacing-none);
+}
+
+/* Gap para grid/flex */
+.gap-none {
+  gap: var(--spacing-none);
+}
+.gap-quark {
+  gap: var(--spacing-quark);
+}
+.gap-nano {
+  gap: var(--spacing-nano);
+}
+.gap-micro {
+  gap: var(--spacing-micro);
+}
+.gap-tiny {
+  gap: var(--spacing-tiny);
+}
+.gap-smaller {
+  gap: var(--spacing-smaller);
+}
+.gap-small {
+  gap: var(--spacing-small);
+}
+.gap-medium {
+  gap: var(--spacing-medium);
+}
+.gap-large {
+  gap: var(--spacing-large);
+}
+.gap-larger {
+  gap: var(--spacing-larger);
+}
+.gap-big {
+  gap: var(--spacing-big);
+}
+.gap-bigger {
+  gap: var(--spacing-bigger);
+}
+.gap-huge {
+  gap: var(--spacing-huge);
+}
+.gap-giant {
+  gap: var(--spacing-giant);
+}
+.gap-enormous {
+  gap: var(--spacing-enormous);
+}

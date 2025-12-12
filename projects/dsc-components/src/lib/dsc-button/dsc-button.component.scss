@@ -1,0 +1,179 @@
+// Design System CAIXA - Tokens oficiais
+:host {
+  --btn-primary-bg: var(--color-primary-90, #005ca9);
+  --btn-primary-hover: var(--color-primary-110, #00437a);
+  --btn-secondary-bg: var(--color-secondary-70, #f39200);
+  --btn-secondary-hover: var(--color-secondary-90, #d87b00);
+  --btn-danger-bg: var(--color-feedback-negative-70, #d93636);
+  --btn-danger-hover: var(--color-feedback-negative-90, #b22c2c);
+  --btn-auxiliary-bg: var(--color-tertiary-70, #54bbab);
+  --btn-auxiliary-hover: var(--color-tertiary-90, #359485);
+  --btn-text-color: var(--color-white, #ffffff);
+  --btn-disabled-bg: var(--color-gray-30, #ebf1f2);
+  --btn-disabled-text: var(--color-gray-70, #9eb2b8);
+  --btn-border-radius: var(--border-radius-nano, 4px);
+  --btn-focus-color: var(--color-primary-70, #2d8ad8);
+}
+
+.dsc-button {
+  display: inline-block;
+
+  &__element {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-nano);
+    border: none;
+    border-radius: var(--btn-border-radius);
+    font-family: var(--font-family-primary);
+    font-weight: var(--font-weight-semibold);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    overflow: hidden;
+
+    &:hover:not(:disabled) {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    &:active:not(:disabled) {
+      transform: translateY(0);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    }
+
+    &:focus-visible {
+      outline: var(--border-width-thin) solid var(--btn-focus-color);
+      outline-offset: var(--spacing-quark);
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 0.6;
+      background-color: var(--btn-disabled-bg) !important;
+      color: var(--btn-disabled-text) !important;
+      border-color: var(--btn-disabled-bg) !important;
+      box-shadow: none;
+      transform: none;
+    }
+  }
+
+  &__icon {
+    font-size: 20px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+
+    &--prefix {
+      margin-right: calc(var(--spacing-quark) * -1);
+    }
+
+    &--suffix {
+      margin-left: calc(var(--spacing-quark) * -1);
+    }
+  }
+
+  &__label {
+    line-height: var(--line-height-near);
+  }
+
+  // Variants
+  &--primary .dsc-button__element {
+    background-color: var(--btn-primary-bg);
+    color: var(--btn-text-color);
+
+    &:hover:not(:disabled) {
+      background-color: var(--btn-primary-hover);
+    }
+  }
+
+  &--secondary .dsc-button__element {
+    background-color: var(--btn-secondary-bg);
+    color: var(--btn-text-color);
+
+    &:hover:not(:disabled) {
+      background-color: var(--btn-secondary-hover);
+    }
+  }
+
+  &--danger .dsc-button__element {
+    background-color: var(--btn-danger-bg);
+    color: var(--btn-text-color);
+
+    &:hover:not(:disabled) {
+      background-color: var(--btn-danger-hover);
+    }
+  }
+
+  &--outlined .dsc-button__element {
+    background-color: transparent;
+    color: var(--btn-primary-bg);
+    border: var(--border-width-thin) solid var(--btn-primary-bg);
+
+    &:hover:not(:disabled) {
+      background-color: rgba(0, 92, 138, 0.08);
+      border-color: var(--btn-primary-hover);
+      color: var(--btn-primary-hover);
+    }
+  }
+
+  &--text .dsc-button__element {
+    background-color: transparent;
+    color: var(--color-gray-130);
+
+    &:hover:not(:disabled) {
+      background-color: var(--color-gray-10);
+    }
+  }
+
+  &--auxiliary .dsc-button__element {
+    background-color: var(--btn-auxiliary-bg);
+    color: var(--btn-text-color);
+
+    &:hover:not(:disabled) {
+      background-color: var(--btn-auxiliary-hover);
+    }
+  }
+
+  // Sizes
+  &--small .dsc-button__element {
+    padding: var(--spacing-quark) var(--spacing-micro);
+    font-size: var(--font-size-nano);
+    min-height: 32px;
+  }
+
+  &--standard .dsc-button__element {
+    padding: var(--spacing-nano) var(--spacing-tiny);
+    font-size: var(--font-size-micro);
+    min-height: 40px;
+  }
+
+  &--large .dsc-button__element {
+    padding: var(--spacing-micro) var(--spacing-smaller);
+    font-size: var(--font-size-tiny);
+    min-height: 48px;
+  }
+
+  // Icon only button
+  &--icon-only .dsc-button__element {
+    padding: var(--spacing-nano);
+    min-width: 40px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+    &.dsc-button--small {
+      min-width: 32px;
+      width: 32px;
+      height: 32px;
+      padding: var(--spacing-quark);
+    }
+
+    &.dsc-button--large {
+      min-width: 48px;
+      width: 48px;
+      height: 48px;
+      padding: var(--spacing-micro);
+    }
+  }
+}

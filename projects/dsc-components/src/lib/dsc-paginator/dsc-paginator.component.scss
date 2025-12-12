@@ -1,0 +1,129 @@
+// Design System CAIXA v2 - usando CSS Custom Properties
+
+.dsc-paginator {
+  padding: var(--spacing-md, 16px);
+  border-top: 1px solid var(--color-gray-50, #d0e0e3);
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-md, 16px);
+    flex-wrap: wrap;
+  }
+
+  &__page-size {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm, 8px);
+  }
+
+  &__label {
+    font-size: var(--font-size-sm, 0.875rem);
+    color: var(--color-text-primary, #212121);
+  }
+
+  &__select {
+    padding: 6px 32px 6px 12px;
+    border: 1px solid var(--color-border-default, #bdbdbd);
+    border-radius: var(--border-radius-sm, 4px);
+    background-color: var(--color-background-primary, #ffffff);
+    font-size: var(--font-size-sm, 0.875rem);
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23212121' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+
+    &:hover:not(:disabled) {
+      border-color: var(--color-primary-90, #005ca9);
+    }
+
+    &:focus {
+      outline: 2px solid var(--color-border-focus, #005ca9);
+      outline-offset: 2px;
+    }
+
+    &:disabled {
+      background-color: var(--color-background-disabled, #e0e0e0);
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+  }
+
+  &__range-label {
+    font-size: var(--font-size-sm, 0.875rem);
+    color: var(--color-text-primary, #212121);
+  }
+
+  &__navigation {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm, 8px);
+  }
+
+  &__current {
+    font-size: var(--font-size-sm, 0.875rem);
+    color: var(--color-text-primary, #212121);
+    margin: 0 var(--spacing-sm, 8px);
+  }
+
+  &__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--color-border-default, #bdbdbd);
+    border-radius: var(--border-radius-sm, 4px);
+    background-color: var(--color-background-primary, #ffffff);
+    cursor: pointer;
+    transition: all var(--motion-duration-short, 0.2s) ease;
+
+    .material-icons {
+      font-size: 20px;
+      color: var(--color-text-primary, #212121);
+    }
+
+    &:hover:not(:disabled) {
+      background-color: var(--color-background-hover, #f5f5f5);
+      border-color: var(--color-primary-90, #005ca9);
+
+      .material-icons {
+        color: var(--color-primary-90, #005ca9);
+      }
+    }
+
+    &:focus {
+      outline: 2px solid var(--color-border-focus, #005ca9);
+      outline-offset: 2px;
+    }
+
+    &:disabled {
+      background-color: var(--color-background-disabled, #e0e0e0);
+      cursor: not-allowed;
+      opacity: 0.4;
+
+      .material-icons {
+        color: var(--color-text-disabled, #bdbdbd);
+      }
+    }
+  }
+
+  &--disabled {
+    opacity: 0.6;
+    pointer-events: none;
+  }
+
+  // Responsive
+  @media (max-width: 768px) {
+    &__container {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    &__navigation {
+      justify-content: center;
+    }
+  }
+}

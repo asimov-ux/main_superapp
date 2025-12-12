@@ -1,0 +1,96 @@
+<div
+  class="dsc-select dsc-select--{{ size }}"
+  [class.dsc-select--disabled]="disabled"
+>
+  <label *ngIf="label" class="dsc-select__label">
+    {{ label }}
+    <span
+      *ngIf="labelHint"
+      class="dsc-select__label-hint"
+      [title]="labelHintTooltip"
+    >
+      {{ labelHint }}
+    </span>
+  </label>
+
+  <div class="dsc-select__control" (click)="toggleDropdown()">
+    <span *ngIf="iconPrefix" class="material-icons dsc-select__icon-prefix">
+      {{ iconPrefix }}
+    </span>
+
+    <span class="dsc-select__value">
+      {{ getSelectedLabel() || placeholder }}
+    </span>
+
+    <span class="material-icons dsc-select__arrow">
+      {{ isOpen ? 'expand_less' : 'expand_more' }}
+    </span>
+  </div>
+
+  <div *ngIf="formFieldHint" class="dsc-select__hint">
+    {{ formFieldHint }}
+  </div>
+
+  <div *ngIf="errorMessage" class="dsc-select__error">
+    {{ errorMessage }}
+  </div>
+
+  <div *ngIf="isOpen" class="dsc-select__dropdown">
+    <div *ngIf="showFilter" class="dsc-select__filter">
+      <input
+        type="text"
+        class="dsc-select__filter-input"
+        [(ngModel)]="filterText"
+        placeholder="Buscar..."
+        (click)="$event.stopPropagation()"
+      />
+    </div>
+
+    <div class="dsc-select__options">
+      <ng-container *ngFor="let option of filteredOptions">
+        <!-- Optgroup -->
+        <div *ngIf="option.options" class="dsc-select__optgroup">
+          <div class="dsc-select__optgroup-label">{{ option.label }}</div>
+          <div
+            *ngFor="let subOption of option.options"
+            class="dsc-select__option"
+            [class.dsc-select__option--selected]="isSelected(subOption)"
+            [class.dsc-select__option--disabled]="subOption.disabled"
+            (click)="onSelectOption(subOption); $event.stopPropagation()"
+          >
+            <span *ngIf="multiple" class="dsc-select__checkbox">
+              <span *ngIf="isSelected(subOption)" class="material-icons"
+                >check_box</span
+              >
+              <span *ngIf="!isSelected(subOption)" class="material-icons"
+                >check_box_outline_blank</span
+              >
+            </span>
+
+            {{ subOption.label }}
+          </div>
+        </div>
+
+        <!-- Regular option -->
+        <div
+          *ngIf="!option.options"
+          class="dsc-select__option"
+          [class.dsc-select__option--selected]="isSelected(option)"
+          [class.dsc-select__option--disabled]="option.disabled"
+          (click)="onSelectOption(option); $event.stopPropagation()"
+        >
+          <span *ngIf="multiple" class="dsc-select__checkbox">
+            <span *ngIf="isSelected(option)" class="material-icons"
+              >check_box</span
+            >
+            <span *ngIf="!isSelected(option)" class="material-icons"
+              >check_box_outline_blank</span
+            >
+          </span>
+
+          {{ option.label }}
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

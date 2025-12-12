@@ -1,0 +1,26 @@
+.dsc-logo {
+  display: inline-block;
+  line-height: 0;
+
+  &__svg {
+    width: auto;
+    height: 100%;
+    display: block;
+  }
+
+  // Brand full maintains aspect ratio
+  &--brand-full &__svg {
+    width: auto;
+  }
+
+  // Synthesis element is square
+  &--synthesis-element &__svg {
+    width: 100%;
+  }
+
+  // Theme variants handle background if needed
+  &--inverse {
+    // Can add background if logo needs it
+    padding: 4px;
+  }
+}

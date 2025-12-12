@@ -1,0 +1,21 @@
+<div class="dsc-alert dsc-alert--{{ variant }}" role="alert">
+  <div class="dsc-alert__container">
+    <span *ngIf="showIcon" class="material-icons dsc-alert__icon">
+      {{ icon }}
+    </span>
+
+    <div class="dsc-alert__content">
+      <h4 *ngIf="title" class="dsc-alert__title">{{ title }}</h4>
+
+      <div
+        *ngIf="message && list.length === 0"
+        class="dsc-alert__message"
+        [innerHTML]="message"
+      ></div>
+
+      <ul *ngIf="list.length > 0" class="dsc-alert__list">
+        <li *ngFor="let item of list">{{ item }}</li>
+      </ul>
+    </div>
+  </div>
+</div>

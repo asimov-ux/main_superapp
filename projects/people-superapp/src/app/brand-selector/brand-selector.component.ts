@@ -8,7 +8,7 @@ import { BrandService, Brand } from '@superapp/ui-tokens';
   imports: [CommonModule],
   template: `
     <div class="brand-selector">
-      <label for="brand-select">🎨 Escolher Tema:</label>
+      <label for="brand-select">Tema:</label>
       <select
         id="brand-select"
         [value]="currentBrand"
@@ -25,37 +25,31 @@ import { BrandService, Brand } from '@superapp/ui-tokens';
       .brand-selector {
         display: flex;
         align-items: center;
-        gap: 12px;
-        padding: 16px;
-        background: var(--color-bg-surface);
-        border-bottom: 1px solid var(--color-border);
+        gap: 8px;
       }
 
       label {
-        font-weight: 600;
-        color: var(--color-text-primary);
-        font-size: 14px;
+        font-size: 11px;
+        color: var(--color-gray-90, #666);
       }
 
       select {
-        padding: 8px 12px;
-        border: 1px solid var(--color-border);
-        border-radius: var(--radius-md);
-        background: var(--color-bg-base);
-        color: var(--color-text-primary);
-        font-size: 14px;
+        padding: 4px 8px;
+        border: 1px solid var(--color-gray-50, #d1d1d1);
+        background: var(--color-white, #fff);
+        color: var(--color-gray-130, #242424);
+        font-family: 'Segoe UI', sans-serif;
+        font-size: 12px;
         cursor: pointer;
-        transition: all var(--transition-fast);
       }
 
       select:hover {
-        border-color: var(--color-brand);
+        border-color: var(--color-primary-90, #005ca9);
       }
 
       select:focus {
         outline: none;
-        border-color: var(--color-brand);
-        box-shadow: 0 0 0 3px rgba(0, 85, 255, 0.1);
+        border-color: var(--color-primary-90, #005ca9);
       }
     `,
   ],

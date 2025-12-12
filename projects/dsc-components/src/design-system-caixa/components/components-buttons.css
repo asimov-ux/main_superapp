@@ -1,0 +1,51 @@
+/* ===========================================
+   DESIGN SYSTEM CAIXA - COMPONENTES BOTÕES
+   =========================================== */
+
+.dsc-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family-caixa);
+  font-size: var(--font-size-micro);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-distant);
+  padding: var(--spacing-micro) var(--spacing-large);
+  border: none;
+  border-radius: var(--border-radius-nano);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  gap: var(--spacing-micro);
+}
+
+.dsc-button-primary {
+  background-color: var(--color-primary-90);
+  color: var(--color-white);
+}
+
+.dsc-button-primary:hover {
+  background-color: var(--color-primary-70);
+}
+
+.dsc-button-secondary {
+  background-color: var(--color-secondary-90);
+  color: var(--color-white);
+}
+
+.dsc-button-tertiary {
+  background-color: transparent;
+  color: var(--color-primary-90);
+  border: var(--border-width-thin) solid var(--color-primary-90);
+}
+
+.dsc-button-small {
+  padding: var(--spacing-quark) var(--spacing-medium);
+  font-size: var(--font-size-nano);
+}
+
+.dsc-button:disabled {
+  background-color: var(--color-gray-30);
+  color: var(--color-gray-70);
+  cursor: not-allowed;
+}

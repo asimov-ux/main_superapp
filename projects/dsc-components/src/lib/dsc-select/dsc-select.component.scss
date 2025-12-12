@@ -1,0 +1,170 @@
+// Design System CAIXA v2 - usando CSS Custom Properties
+
+.dsc-select {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+
+  &__label {
+    display: block;
+    margin-bottom: var(--spacing-sm, 8px);
+    font-size: var(--font-size-sm, 0.875rem);
+    font-weight: 500;
+    color: var(--color-text-primary, #212121);
+  }
+
+  &__label-hint {
+    margin-left: var(--spacing-xs, 4px);
+    color: var(--color-text-secondary, #757575);
+    cursor: help;
+  }
+
+  &__control {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm, 8px);
+    padding: 10px var(--spacing-md, 16px);
+    border: 1px solid var(--color-border-default, #bdbdbd);
+    border-radius: var(--border-radius-sm, 4px);
+    background-color: var(--color-background-primary, #ffffff);
+    cursor: pointer;
+    transition: all var(--motion-duration-normal, 0.3s) ease;
+    min-height: 40px;
+
+    &:hover:not(.dsc-select--disabled &) {
+      border-color: var(--color-primary-90, #005ca9);
+    }
+
+    &:focus-within {
+      outline: 2px solid var(--color-border-focus, #005ca9);
+      outline-offset: 2px;
+    }
+  }
+
+  &__icon-prefix {
+    font-size: 20px;
+    color: var(--color-text-secondary, #757575);
+  }
+
+  &__value {
+    flex: 1;
+    font-size: var(--font-size-md, 1rem);
+    color: var(--color-text-primary, #212121);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__arrow {
+    font-size: 24px;
+    color: var(--color-text-secondary, #757575);
+    transition: transform var(--motion-duration-normal, 0.3s) ease;
+  }
+
+  &__hint {
+    margin-top: var(--spacing-xs, 4px);
+    font-size: var(--font-size-xs, 0.75rem);
+    color: var(--color-text-secondary, #757575);
+  }
+
+  &__error {
+    margin-top: var(--spacing-xs, 4px);
+    font-size: var(--font-size-xs, 0.75rem);
+    color: var(--color-feedback-negative-70, #d93636);
+  }
+
+  &__dropdown {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    right: 0;
+    background-color: var(--color-background-primary, #ffffff);
+    border: 1px solid var(--color-border-default, #bdbdbd);
+    border-radius: var(--border-radius-sm, 4px);
+    box-shadow: var(--shadow-lg, 0 4px 16px rgba(0, 0, 0, 0.15));
+    z-index: 1000;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+
+  &__filter {
+    padding: var(--spacing-sm, 8px);
+    border-bottom: 1px solid var(--color-border-default, #bdbdbd);
+  }
+
+  &__filter-input {
+    width: 100%;
+    padding: var(--spacing-sm, 8px);
+    border: 1px solid var(--color-border-default, #bdbdbd);
+    border-radius: var(--border-radius-sm, 4px);
+    font-size: var(--font-size-sm, 0.875rem);
+
+    &:focus {
+      outline: 2px solid var(--color-border-focus, #005ca9);
+      outline-offset: 2px;
+    }
+  }
+
+  &__options {
+    padding: var(--spacing-xs, 4px) 0;
+  }
+
+  &__optgroup-label {
+    padding: var(--spacing-sm, 8px) var(--spacing-md, 16px);
+    font-size: var(--font-size-xs, 0.75rem);
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--color-text-secondary, #757575);
+  }
+
+  &__option {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm, 8px);
+    padding: var(--spacing-sm, 8px) var(--spacing-md, 16px);
+    cursor: pointer;
+    transition: background-color var(--motion-duration-short, 0.2s) ease;
+
+    &:hover:not(&--disabled) {
+      background-color: var(--color-background-hover, #f5f5f5);
+    }
+
+    &--selected {
+      background-color: var(--color-primary-10, #e5f1fc);
+      color: var(--color-primary-90, #005ca9);
+      font-weight: 500;
+    }
+
+    &--disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+
+  &__checkbox {
+    display: flex;
+    align-items: center;
+
+    .material-icons {
+      font-size: 20px;
+    }
+  }
+
+  // Sizes
+  &--small &__control {
+    min-height: 32px;
+    padding: 6px 12px;
+  }
+
+  &--large &__control {
+    min-height: 48px;
+    padding: 14px 20px;
+  }
+
+  // Disabled
+  &--disabled &__control {
+    background-color: var(--color-background-disabled, #e0e0e0);
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+}

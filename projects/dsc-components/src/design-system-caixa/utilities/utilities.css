@@ -1,0 +1,78 @@
+/* ===========================================
+   DESIGN SYSTEM CAIXA - UTILITIES
+   =========================================== */
+
+/* Display */
+.dsc-d-block {
+  display: block;
+}
+.dsc-d-flex {
+  display: flex;
+}
+.dsc-d-grid {
+  display: grid;
+}
+.dsc-d-none {
+  display: none;
+}
+
+/* Flexbox */
+.dsc-flex-row {
+  flex-direction: row;
+}
+.dsc-flex-col {
+  flex-direction: column;
+}
+.dsc-justify-center {
+  justify-content: center;
+}
+.dsc-justify-between {
+  justify-content: space-between;
+}
+.dsc-align-center {
+  align-items: center;
+}
+.dsc-flex-1 {
+  flex: 1 1 0%;
+}
+
+/* Text Alignment */
+.dsc-text-left {
+  text-align: left;
+}
+.dsc-text-center {
+  text-align: center;
+}
+.dsc-text-right {
+  text-align: right;
+}
+
+/* Font Weight */
+.dsc-font-normal {
+  font-weight: 400;
+}
+.dsc-font-semibold {
+  font-weight: 600;
+}
+.dsc-font-bold {
+  font-weight: 700;
+}
+
+/* Cursor */
+.dsc-cursor-pointer {
+  cursor: pointer;
+}
+.dsc-cursor-not-allowed {
+  cursor: not-allowed;
+}
+
+/* Opacity */
+.dsc-opacity-0 {
+  opacity: 0;
+}
+.dsc-opacity-50 {
+  opacity: 0.5;
+}
+.dsc-opacity-100 {
+  opacity: 1;
+}

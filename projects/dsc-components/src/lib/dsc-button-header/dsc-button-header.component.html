@@ -1,0 +1,17 @@
+<button
+  class="dsc-button-header"
+  [class.dsc-button-header--disabled]="disabled"
+  [disabled]="disabled"
+  [tabindex]="tabindex"
+  [title]="dscTooltip"
+  [attr.aria-label]="ariaLabel || label"
+  (click)="onClick($event)"
+>
+  <span class="material-icons dsc-button-header__icon">
+    {{ icon }}
+  </span>
+
+  <span class="dsc-button-header__label">
+    {{ label }}
+  </span>
+</button>

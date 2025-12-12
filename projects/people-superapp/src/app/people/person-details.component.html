@@ -1,0 +1,42 @@
+<div class="person-details">
+  <header class="person-header">
+    <div class="person-header__content">
+      <h2 class="person-header__title">{{ person?.name }}</h2>
+      <p class="person-header__subtitle">
+        {{ person?.role }} · {{ person?.department }}
+      </p>
+    </div>
+  </header>
+
+  <main class="person-body">
+    <section class="card">
+      <h3>Informações Gerais</h3>
+      <div class="grid">
+        <div class="row">
+          <span>CPF</span><strong>{{ person?.cpf }}</strong>
+        </div>
+        <div class="row">
+          <span>Matrícula</span><strong>{{ person?.matricula }}</strong>
+        </div>
+        <div class="row">
+          <span>Lotação</span><strong>{{ person?.lotacao }}</strong>
+        </div>
+        <div class="row">
+          <span>Situação</span><strong>{{ person?.situacao }}</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h3>Contato</h3>
+      <div class="grid">
+        <div class="row">
+          <span>E-mail</span><strong>{{ person?.email }}</strong>
+        </div>
+        <div class="row">
+          <span>Telefone</span><strong>{{ person?.telefone }}</strong>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>

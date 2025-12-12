@@ -1,0 +1,135 @@
+/* ===========================================
+   DESIGN SYSTEM CAIXA - TOKENS DE TIPOGRAFIA
+   =========================================== */
+
+:root {
+  /* Font Family */
+  --font-family-caixa: 'CAIXA Std', Arial, sans-serif;
+
+  /* Tamanhos de fonte (Escala 1.125 - Major Second) */
+  --font-size-quark: 12px;
+  --font-size-nano: 14px;
+  --font-size-micro: 16px;
+  --font-size-tiny: 18px;
+  --font-size-smaller: 20px;
+  --font-size-small: 24px;
+  --font-size-medium: 28px;
+  --font-size-large: 32px;
+  --font-size-larger: 36px;
+  --font-size-big: 40px;
+  --font-size-bigger: 44px;
+  --font-size-huge: 52px;
+  --font-size-giant: 60px;
+
+  /* Pesos de fonte */
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Altura de linha */
+  --line-height-tight: 100%;
+  --line-height-near: 120%;
+  --line-height-medium: 140%;
+  --line-height-distant: 150%;
+  --line-height-farther: 170%;
+}
+
+/* Classes de Display */
+.display-large-600 {
+  font-family: var(--font-family-caixa);
+  font-size: var(--font-size-giant);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-near);
+}
+.display-large-700 {
+  font-family: var(--font-family-caixa);
+  font-size: var(--font-size-giant);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-near);
+}
+.display-standard-600 {
+  font-family: var(--font-family-caixa);
+  font-size: var(--font-size-huge);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-near);
+}
+.display-standard-700 {
+  font-family: var(--font-family-caixa);
+  font-size: var(--font-size-huge);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-near);
+}
+
+/* Classes de Heading */
+.heading-huge-600 {
+  font-family: var(--font-family-caixa);
+  font-size: var(--font-size-big);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-medium);
+}
+.heading-huge-700 {
+  font-family: var(--font-family-caixa);
+  font-size: var(--font-size-big);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-medium);
+}
+.heading-large-600 {
+  font-family: var(--font-family-caixa);
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-medium);
+}
+.heading-large-700 {
+  font-family: var(--font-family-caixa);
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-medium);
+}
+.heading-standard-600 {
+  font-family: var(--font-family-caixa);
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-medium);
+}
+.heading-standard-700 {
+  font-family: var(--font-family-caixa);
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-medium);
+}
+
+/* Classes de Text */
+.text-huge-400 {
+  font-family: var(--font-family-caixa);
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-distant);
+}
+.text-standard-400 {
+  font-family: var(--font-family-caixa);
+  font-size: var(--font-size-micro);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-distant);
+}
+.text-standard-600 {
+  font-family: var(--font-family-caixa);
+  font-size: var(--font-size-micro);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-distant);
+}
+.text-small-400 {
+  font-family: var(--font-family-caixa);
+  font-size: var(--font-size-nano);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-distant);
+}
+
+/* Classes de Link */
+.link-standard {
+  font-family: var(--font-family-caixa);
+  font-size: var(--font-size-micro);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-distant);
+  text-decoration: underline;
+  color: var(--color-primary-90);
+}

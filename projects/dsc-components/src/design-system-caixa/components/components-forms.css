@@ -1,0 +1,57 @@
+/* ===========================================
+   DESIGN SYSTEM CAIXA - COMPONENTES FORMULÁRIOS
+   =========================================== */
+
+.dsc-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-micro);
+}
+
+.dsc-label {
+  font-family: var(--font-family-caixa);
+  font-size: var(--font-size-micro);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-gray-130);
+}
+
+.dsc-input {
+  font-family: var(--font-family-caixa);
+  font-size: var(--font-size-micro);
+  padding: var(--spacing-micro) var(--spacing-small);
+  border: var(--border-width-thin) solid var(--color-gray-50);
+  border-radius: var(--border-radius-nano);
+  background-color: var(--color-white);
+  color: var(--color-gray-130);
+  transition: all 0.2s ease;
+}
+
+.dsc-input:focus {
+  outline: none;
+  border-color: var(--color-primary-90);
+  box-shadow: 0 0 0 2px var(--color-primary-10);
+}
+
+.dsc-input:disabled {
+  background-color: var(--color-gray-10);
+  color: var(--color-gray-70);
+  cursor: not-allowed;
+}
+
+.dsc-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2364747A' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right var(--spacing-small) center;
+  padding-right: var(--spacing-large);
+}
+
+.dsc-input-error {
+  border-color: var(--color-feedback-negative-70);
+}
+
+.dsc-error-text {
+  font-size: var(--font-size-nano);
+  color: var(--color-feedback-negative-70);
+  margin-top: var(--spacing-quark);
+}

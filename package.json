@@ -9,7 +9,9 @@
     "test": "ng test",
     "tokens:build": "node projects/ui-tokens/scripts/build-brand-css.js",
     "tokens:check": "node projects/ui-tokens/scripts/check-contract.js",
-    "tokens:validate": "npm run tokens:check && npm run tokens:build"
+    "tokens:validate": "npm run tokens:check && npm run tokens:build",
+    "storybook": "ng run people-superapp:storybook",
+    "build-storybook": "ng run people-superapp:build-storybook"
   },
   "private": true,
   "dependencies": {
@@ -22,14 +24,23 @@
     "@angular/platform-browser-dynamic": "^19.0.0",
     "@angular/router": "^19.0.0",
     "@angular/service-worker": "^19.0.0",
+    "@fluentui/font-icons-mdl2": "^8.5.70",
+    "@fluentui/web-components": "^2.6.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
   },
   "devDependencies": {
+    "@angular-devkit/architect": "^0.1900.0",
     "@angular-devkit/build-angular": "^19.0.0",
+    "@angular-devkit/core": "^19.0.0",
     "@angular/cli": "^19.0.0",
     "@angular/compiler-cli": "^19.0.0",
+    "@compodoc/compodoc": "^1.1.32",
+    "@storybook/addon-a11y": "^10.1.5",
+    "@storybook/addon-docs": "^10.1.5",
+    "@storybook/addon-onboarding": "^10.1.5",
+    "@storybook/angular": "^10.1.5",
     "@types/jasmine": "~5.1.0",
     "ajv": "^8.17.1",
     "jasmine-core": "~5.4.0",
@@ -39,6 +50,7 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "ng-packagr": "^19.0.0",
+    "storybook": "^10.1.5",
     "typescript": "~5.8.2"
   }
 }

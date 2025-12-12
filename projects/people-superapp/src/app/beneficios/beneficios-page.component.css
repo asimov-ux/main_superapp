@@ -1,0 +1,113 @@
+:host {
+  display: block;
+  padding: 24px;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.page-header h1 {
+  color: var(--color-text);
+}
+.subtitle {
+  color: var(--color-muted);
+}
+
+.filters {
+  border-bottom: 1px solid var(--color-card-border);
+}
+
+.filter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
+  color: var(--color-text);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.filter-btn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+.filter-btn.active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+}
+
+.beneficios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.beneficio-card {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
+  border-radius: 8px;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+.beneficio-card:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 4px 16px rgba(0, 92, 169, 0.12);
+  transform: translateY(-2px);
+}
+
+.card-icon {
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.descricao,
+.label,
+.text {
+  color: var(--color-muted);
+}
+.valor {
+  color: var(--color-text);
+}
+.card-footer {
+  border-top: 1px solid var(--color-card-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+}
+
+.categoria-tag {
+  color: var(--color-primary);
+  background: #e3f2fd;
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Icons base ensure pseudo-elements render */
+.ms-Icon {
+  font-family: 'FabricMDL2Icons';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+}
+
+/* Minimal responsive tweaks */
+@media (max-width: 768px) {
+  :host {
+    padding: 16px;
+  }
+  .beneficios-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}

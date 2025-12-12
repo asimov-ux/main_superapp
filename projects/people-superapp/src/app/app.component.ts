@@ -1,54 +1,70 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import {
+  Router,
+  RouterOutlet,
+  RouterLink,
+  RouterLinkActive,
+  NavigationEnd,
+} from '@angular/router';
+import { CommonModule } from '@angular/common';
 import { BrandSelectorComponent } from './brand-selector/brand-selector.component';
+import { AppUpdatePromptComponent } from './components/app-update-prompt.component';
+import { AppUpdateService } from './services/app-update.service';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, BrandSelectorComponent],
-  template: `
-    <div class="app-container">
-      <header class="app-header">
-        <h1>{{ title }}</h1>
-      </header>
-
-      <!-- Seletor de Marca -->
-      <app-brand-selector></app-brand-selector>
-
-      <main class="app-content">
-        <router-outlet />
-      </main>
-    </div>
-  `,
-  styles: [
-    `
-      .app-container {
-        min-height: 100vh;
-        background: var(--color-bg-base);
-      }
-
-      .app-header {
-        background: var(--color-brand);
-        color: var(--color-text-inverse);
-        padding: var(--spacing-lg);
-        text-align: center;
-        box-shadow: var(--shadow-md);
-      }
-
-      .app-header h1 {
-        margin: 0;
-        font-size: var(--fontSize-3xl);
-        font-weight: var(--fontWeight-bold);
-      }
-
-      .app-content {
-        padding: var(--spacing-lg);
-        max-width: 1200px;
-        margin: 0 auto;
-      }
-    `,
+  imports: [
+    CommonModule,
+    RouterOutlet,
+    RouterLink,
+    RouterLinkActive,
+    BrandSelectorComponent,
+    AppUpdatePromptComponent,
   ],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.scss',
 })
-export class AppComponent {
-  title = 'Super App de Pessoas';
+export class AppComponent implements OnInit {
+  title = 'Portal de Benefícios - CAIXA';
+  sidebarPinned = false;
+  isWelcomePage = false;
+
+  constructor(private updateService: AppUpdateService, private router: Router) {
+    // Detectar mudanças de rota
+    this.router.events
+      .pipe(filter((event) => event instanceof NavigationEnd))
+      .subscribe((event: NavigationEnd) => {
+        this.isWelcomePage =
+          event.urlAfterRedirects === '/' ||
+          event.urlAfterRedirects.startsWith('/welcome');
+      });
+  }
+
+  ngOnInit(): void {
+    this.updateService.initialize();
+    // Verificar rota inicial
+    this.isWelcomePage =
+      this.router.url === '/' || this.router.url.startsWith('/welcome');
+    // Recuperar estado do menu do localStorage
+    const savedPinState = localStorage.getItem('sidebarPinned');
+    if (savedPinState) {
+      this.sidebarPinned = savedPinState === 'true';
+    }
+  }
+
+  toggleSidebarPin(): void {
+    this.sidebarPinned = !this.sidebarPinned;
+    localStorage.setItem('sidebarPinned', String(this.sidebarPinned));
+  }
+
+  getCurrentRoute(): string {
+    const path = window.location.pathname;
+    if (path.includes('people')) return 'Pessoas';
+    if (path.includes('beneficios')) return 'Benefícios';
+    if (path.includes('ausencias')) return 'Ausências';
+    if (path.includes('dashboard')) return 'Dashboard';
+    return 'Início';
+  }
 }

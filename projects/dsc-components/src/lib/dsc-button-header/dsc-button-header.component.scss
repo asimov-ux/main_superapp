@@ -1,0 +1,66 @@
+// Design System CAIXA - Button Header
+:host {
+  --btn-header-bg: var(--color-primary-90);
+  --btn-header-hover: var(--color-primary-110);
+  --btn-header-text: var(--color-white);
+  --btn-header-focus: var(--color-white);
+}
+
+.dsc-button-header {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-nano);
+  padding: var(--spacing-nano) var(--spacing-tiny);
+  background-color: var(--btn-header-bg);
+  color: var(--btn-header-text);
+  border: none;
+  border-radius: var(--border-radius-nano);
+  cursor: pointer;
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-micro);
+  font-weight: var(--font-weight-semibold);
+  transition: background-color 0.2s ease-in-out;
+  min-height: 48px;
+
+  &:hover:not(:disabled) {
+    background-color: var(--btn-header-hover);
+  }
+
+  &:focus-visible {
+    outline: var(--border-width-thin) solid var(--btn-header-focus);
+    outline-offset: var(--spacing-quark);
+  }
+
+  &__icon {
+    font-size: 24px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  &__label {
+    line-height: var(--line-height-near);
+  }
+
+  &--disabled,
+  &:disabled {
+    background-color: var(--color-gray-30);
+    color: var(--color-gray-70);
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+
+  // Variants
+  &--light {
+    background-color: var(--color-white);
+    color: var(--color-primary-90);
+
+    &:hover:not(:disabled) {
+      background-color: var(--color-gray-10);
+    }
+
+    &:focus-visible {
+      outline-color: var(--color-primary-90);
+    }
+  }
+}

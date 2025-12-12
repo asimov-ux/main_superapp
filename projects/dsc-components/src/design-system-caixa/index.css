@@ -1,0 +1,97 @@
+/* ===========================================
+   DESIGN SYSTEM CAIXA - ENTRY POINT
+   Importar este arquivo para usar todo o sistema
+   =========================================== */
+
+/* Tokens Base */
+@import url('./tokens/tokens-colors.css');
+@import url('./tokens/tokens-spacing.css');
+@import url('./tokens/tokens-typography.css');
+@import url('./tokens/tokens-borders-shadows.css');
+
+/* Sistema de Grid */
+@import url('./components/grid-system.css');
+
+/* Componentes */
+@import url('./components/components-buttons.css');
+@import url('./components/components-forms.css');
+@import url('./components/components-feedback.css');
+
+/* Utilities */
+@import url('./utilities/utilities.css');
+
+/* Reset básico e estilos globais */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family-caixa);
+  font-size: var(--font-size-micro);
+  line-height: var(--line-height-distant);
+  color: var(--color-gray-130);
+  background-color: var(--color-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: var(--font-weight-bold);
+}
+
+p {
+  margin: 0 0 var(--spacing-small) 0;
+}
+
+a {
+  color: var(--color-primary-90);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Container padrão */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-medium);
+}
+
+/* Espaçamentos para seções */
+.section {
+  padding: var(--spacing-huge) 0;
+}
+
+.section-small {
+  padding: var(--spacing-large) 0;
+}
+
+.section-large {
+  padding: var(--spacing-giant) 0;
+}

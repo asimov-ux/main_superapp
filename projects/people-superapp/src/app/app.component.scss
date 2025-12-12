@@ -1,0 +1,383 @@
+/* ========================================
+   FLUENT UI / WINDOWS STYLE - CAIXA
+   Design System: Quadrado, Profissional
+   ======================================== */
+
+// Fonts - Segoe UI (Windows standard)
+$font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+$font-size-xs: 11px;
+$font-size-sm: 12px;
+$font-size-base: 13px;
+$font-size-md: 14px;
+$font-size-lg: 16px;
+$font-size-xl: 20px;
+
+// Spacing - Compact
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 12px;
+$spacing-lg: 16px;
+$spacing-xl: 24px;
+
+/* ========== APP SHELL ========== */
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-gray-10, #f3f3f3);
+  font-family: $font-family;
+  font-size: $font-size-base;
+}
+
+/* ========== HEADER ========== */
+.header {
+  background: var(--color-primary-90, #005ca9);
+  color: #ffffff;
+  height: 48px;
+  flex-shrink: 0;
+  z-index: 1000;
+}
+
+.header__container {
+  height: 100%;
+  padding: 0 $spacing-lg;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $spacing-lg;
+}
+
+/* Brand */
+.header__brand {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  flex-shrink: 0;
+}
+
+.header__logo-text {
+  font-size: $font-size-xl;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
+.header__separator {
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 300;
+  margin: 0 $spacing-xs;
+}
+
+.header__app-name {
+  font-size: $font-size-md;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Search */
+.header__search {
+  flex: 1;
+  max-width: 400px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  position: absolute;
+  left: $spacing-sm;
+  width: 14px;
+  height: 14px;
+  color: #666;
+  pointer-events: none;
+}
+
+.search-input {
+  width: 100%;
+  height: 32px;
+  padding: 0 $spacing-md 0 32px;
+  border: 1px solid transparent;
+  background: rgba(255, 255, 255, 0.9);
+  font-family: $font-family;
+  font-size: $font-size-sm;
+  color: #333;
+
+  &::placeholder {
+    color: #888;
+  }
+
+  &:focus {
+    outline: none;
+    background: #ffffff;
+    border-color: var(--color-primary-70, #0078d4);
+  }
+}
+
+/* Header Actions */
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: $spacing-xs;
+}
+
+.header__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  position: relative;
+  transition: background 0.1s;
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  &:active {
+    background: rgba(255, 255, 255, 0.15);
+  }
+}
+
+.notification-badge {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  min-width: 14px;
+  height: 14px;
+  padding: 0 4px;
+  background: var(--color-feedback-negative-70, #d13438);
+  color: #fff;
+  font-size: 9px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__username {
+  font-size: $font-size-sm;
+  color: rgba(255, 255, 255, 0.9);
+  margin-left: $spacing-sm;
+}
+
+.header__logout {
+  width: auto;
+  padding: 0 $spacing-md;
+  gap: $spacing-xs;
+  margin-left: $spacing-sm;
+  background: rgba(255, 255, 255, 0.1);
+
+  span {
+    font-size: $font-size-sm;
+  }
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+}
+
+/* ========== APP BODY ========== */
+.app-body {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+/* ========== SIDEBAR ========== */
+.sidebar {
+  width: 48px;
+  background: var(--color-gray-20, #e6e6e6);
+  border-right: 1px solid var(--color-gray-30, #d1d1d1);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  transition: width 0.2s;
+
+  &:hover {
+    width: 200px;
+
+    .sidebar__item span,
+    .sidebar__pin-btn span {
+      opacity: 1;
+      width: auto;
+    }
+  }
+
+  // Sidebar Fixo (Pinned)
+  &--pinned {
+    width: 200px;
+
+    .sidebar__item span,
+    .sidebar__pin-btn span {
+      opacity: 1;
+      width: auto;
+    }
+
+    .sidebar__pin-btn {
+      background: var(--color-primary-10, #deecf9);
+      color: var(--color-primary-90, #005ca9);
+    }
+  }
+}
+
+// Botão de Fixar Menu
+.sidebar__pin-btn {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 $spacing-md;
+  color: var(--color-gray-110, #424242);
+  background: transparent;
+  border: none;
+  gap: $spacing-md;
+  cursor: pointer;
+  border-bottom: 1px solid var(--color-gray-30, #d1d1d1);
+  transition: background 0.1s;
+
+  svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+  }
+
+  span {
+    font-size: $font-size-sm;
+    white-space: nowrap;
+    opacity: 0;
+    width: 0;
+    overflow: hidden;
+    transition: opacity 0.2s;
+  }
+
+  &:hover {
+    background: var(--color-gray-30, #d1d1d1);
+  }
+}
+
+.sidebar__nav {
+  flex: 1;
+  padding: $spacing-xs 0;
+}
+
+.sidebar__item {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 $spacing-md;
+  color: var(--color-gray-130, #242424);
+  text-decoration: none;
+  gap: $spacing-md;
+  border-left: 3px solid transparent;
+  transition: background 0.1s;
+
+  svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    color: var(--color-gray-110, #424242);
+  }
+
+  span {
+    font-size: $font-size-sm;
+    white-space: nowrap;
+    opacity: 0;
+    width: 0;
+    overflow: hidden;
+    transition: opacity 0.2s;
+  }
+
+  &:hover {
+    background: var(--color-gray-30, #d1d1d1);
+  }
+
+  &.active {
+    background: var(--color-primary-10, #deecf9);
+    border-left-color: var(--color-primary-90, #005ca9);
+
+    svg {
+      color: var(--color-primary-90, #005ca9);
+    }
+  }
+}
+
+.sidebar__footer {
+  padding: $spacing-sm;
+  border-top: 1px solid var(--color-gray-30, #d1d1d1);
+}
+
+/* ========== MAIN CONTENT ========== */
+.main-content {
+  flex: 1;
+  padding: $spacing-lg;
+  overflow-y: auto;
+  background: var(--color-gray-10, #f3f3f3);
+}
+
+/* ========== FOOTER ========== */
+.footer {
+  height: 32px;
+  background: var(--color-primary-110, #004578);
+  color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 $spacing-lg;
+  font-size: $font-size-xs;
+  flex-shrink: 0;
+}
+
+.footer__left,
+.footer__right {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+}
+
+.footer__separator {
+  opacity: 0.5;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .header__search {
+    display: none;
+  }
+
+  .header__username {
+    display: none;
+  }
+
+  .sidebar {
+    width: 48px;
+
+    &:hover {
+      width: 48px;
+
+      .sidebar__item span {
+        opacity: 0;
+        width: 0;
+      }
+    }
+  }
+}
+
+/* ========== WELCOME PAGE ISOLATION ========== */
+/* Garante que a página welcome não seja afetada pelo layout */
+:host-context(app-welcome) {
+  .app-shell,
+  header,
+  .sidebar,
+  .footer {
+    display: none !important;
+  }
+}

@@ -43,3 +43,5 @@ Thumbs.db
 
 # Build outputs
 /dist/ui-tokens
+*storybook.log
+storybook-static

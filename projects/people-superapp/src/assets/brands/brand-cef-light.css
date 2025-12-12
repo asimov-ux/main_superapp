@@ -1,10 +1,10 @@
 /**
  * Caixa Econômica Federal
  * Version: 1.0.0
- * Generated: 2025-12-05T17:23:45.110Z
+ * Generated: 2025-12-10T13:25:35.901Z
  */
 
-:root {
+:root[data-brand="cef-light"] {
   --color-brand: #0066CC;
   --color-brand-hover: #00547A;
   --color-brand-active: #006A99;

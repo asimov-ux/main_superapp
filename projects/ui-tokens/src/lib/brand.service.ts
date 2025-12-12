@@ -29,28 +29,21 @@ export class BrandService {
   private whitelist: BrandConfig = {
     allowedBrands: [
       {
-        id: 'cef-light',
-        name: 'Caixa Economica Federal',
-        version: '1.0.0',
-        enabled: true,
-        requiresSignature: false,
-      },
-      {
         id: 'acme-light',
-        name: 'ACME light',
+        name: 'Light',
         version: '1.0.0',
         enabled: true,
         requiresSignature: false,
       },
       {
         id: 'acme-dark',
-        name: 'ACME Dark',
+        name: 'Dark',
         version: '1.0.0',
         enabled: true,
         requiresSignature: false,
       },
     ],
-    defaultBrand: 'caixa-light',
+    defaultBrand: 'acme-light',
   };
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {

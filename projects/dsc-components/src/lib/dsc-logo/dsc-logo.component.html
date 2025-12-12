@@ -1,0 +1,53 @@
+<svg
+  class="dsc-logo__svg"
+  [attr.viewBox]="type === 'brand-full' ? '0 0 200 60' : '0 0 60 60'"
+  [attr.aria-label]="alt"
+  role="img"
+  xmlns="http://www.w3.org/2000/svg"
+  preserveAspectRatio="xMidYMid meet"
+>
+  <!-- Brand Full (CAIXA + X) -->
+  <g *ngIf="type === 'brand-full'">
+    <!-- C -->
+    <path
+      [attr.fill]="primaryColor"
+      d="M10 15 C10 10, 15 5, 25 5 C30 5, 35 7, 37 10 L30 15 C28 13, 26 12, 24 12 C18 12, 15 15, 15 20 C15 25, 18 28, 24 28 C26 28, 28 27, 30 25 L37 30 C35 33, 30 35, 25 35 C15 35, 10 30, 10 20 Z"
+    />
+
+    <!-- A -->
+    <path
+      [attr.fill]="primaryColor"
+      d="M45 35 L48 25 L52 10 L56 10 L60 25 L63 35 L57 35 L56 30 L50 30 L49 35 Z M51 25 L55 25 L53 15 Z"
+    />
+
+    <!-- I -->
+    <path [attr.fill]="primaryColor" d="M70 10 L76 10 L76 35 L70 35 Z" />
+
+    <!-- X (left blue part) -->
+    <path
+      [attr.fill]="primaryColor"
+      d="M85 10 L95 10 L90 20 L95 30 L85 30 L82 22 Z"
+    />
+
+    <!-- X (right orange part) -->
+    <path
+      [attr.fill]="secondaryColor"
+      d="M88 18 L95 10 L105 10 L95 22 L105 35 L95 35 L88 25 Z"
+    />
+
+    <!-- A -->
+    <path
+      [attr.fill]="primaryColor"
+      d="M115 35 L118 25 L122 10 L126 10 L130 25 L133 35 L127 35 L126 30 L120 30 L119 35 Z M121 25 L125 25 L123 15 Z"
+    />
+  </g>
+
+  <!-- Synthesis Element (X only) -->
+  <g *ngIf="type === 'synthesis-element'">
+    <!-- X (left blue part) -->
+    <path [attr.fill]="primaryColor" d="M10 15 L30 15 L22 30 L15 35 Z" />
+
+    <!-- X (right orange part) -->
+    <path [attr.fill]="secondaryColor" d="M25 15 L45 15 L45 35 L30 40 Z" />
+  </g>
+</svg>

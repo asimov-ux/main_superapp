@@ -1,23 +1,1424 @@
 /**
  * ACME Corporation - Dark Theme
- * Version: 1.0.0
- * Generated: 2025-12-05T17:23:45.103Z
+ * Version: 2.0.0
+ * Generated: 2025-12-11
  */
 
 :root {
-  --color-brand: #3B82F6;
-  --color-brand-hover: #60A5FA;
-  --color-brand-active: #2563EB;
-  --color-text-primary: #F9FAFB;
-  --color-text-secondary: #D1D5DB;
-  --color-text-tertiary: #9CA3AF;
-  --color-text-inverse: #111827;
+  /* Primary Colors - Dark Mode Blue */
+  --color-primary-90: #3b82f6;
+  --color-primary-110: #2563eb;
+  --color-primary-70: #60a5fa;
+  --color-primary-50: #93c5fd;
+  --color-primary-30: #bfdbfe;
+  --color-primary-10: #1e3a5f;
+
+  /* Secondary Colors */
+  --color-secondary-70: #60a5fa;
+
+  /* Tertiary */
+  --color-tertiary-50: #818cf8;
+
+  /* Grays - Dark Mode */
+  --color-gray-10: #111827;
+  --color-gray-20: #1f2937;
+  --color-gray-30: #374151;
+  --color-gray-50: #4b5563;
+  --color-gray-70: #6b7280;
+  --color-gray-90: #9ca3af;
+  --color-gray-110: #d1d5db;
+  --color-gray-130: #f3f4f6;
+
+  /* Background - DARK MODE */
+  --color-white: #1f2937;
   --color-bg-base: #111827;
-  --color-bg-surface: #1F2937;
+  --color-bg-surface: #1f2937;
   --color-bg-secondary: #374151;
-  --color-border: #4B5563;
-  --color-success: #10B981;
-  --color-warning: #F59E0B;
-  --color-error: #EF4444;
-  --color-info: #3B82F6;
+  --color-surface: #1f2937;
+
+  /* Text - DARK MODE */
+  --color-text-primary: #f9fafb;
+  --color-text-secondary: #d1d5db;
+  --color-text-tertiary: #9ca3af;
+  --color-text-inverse: #111827;
+
+  /* Border - DARK MODE */
+  --color-border: #4b5563;
+
+  /* Feedback */
+  --color-feedback-positive-70: #10b981;
+  --color-feedback-negative-70: #ef4444;
+  --color-feedback-alert-70: #f59e0b;
+
+  /* Legacy aliases */
+  --color-brand: #3b82f6;
+  --color-brand-hover: #60a5fa;
+  --color-brand-active: #2563eb;
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+  --color-info: #3b82f6;
+}
+
+/* ===== DARK MODE OVERRIDES ===== */
+
+/* App Shell */
+.app-shell {
+  background: #111827 !important;
+}
+
+/* Header */
+.header {
+  background: #1f2937 !important;
+  border-bottom-color: #374151 !important;
+}
+
+.header__logo-text {
+  color: #3b82f6 !important;
+}
+
+.header__separator,
+.header__app-name {
+  color: #9ca3af !important;
+}
+
+.search-input {
+  background: #374151 !important;
+  border-color: #4b5563 !important;
+  color: #f9fafb !important;
+}
+
+.search-input::placeholder {
+  color: #6b7280 !important;
+}
+
+.header__btn {
+  color: #d1d5db !important;
+}
+
+.header__btn:hover {
+  background: #374151 !important;
+}
+
+.header__username {
+  color: #d1d5db !important;
+}
+
+/* Sidebar */
+.sidebar {
+  background: #1f2937 !important;
+  border-right-color: #374151 !important;
+}
+
+.sidebar__item {
+  color: #d1d5db !important;
+}
+
+.sidebar__item:hover {
+  background: #374151 !important;
+  color: #f9fafb !important;
+}
+
+.sidebar__item.active {
+  background: #3b82f6 !important;
+  color: #fff !important;
+}
+
+/* Footer */
+.footer {
+  background: #1f2937 !important;
+  border-top-color: #374151 !important;
+  color: #9ca3af !important;
+}
+
+/* Main Content */
+.main-content {
+  background: #111827 !important;
+}
+
+/* Pages - Generic */
+.page-header h1,
+h1,
+h2,
+h3,
+h4 {
+  color: #f9fafb !important;
+}
+
+.subtitle,
+.page-header p {
+  color: #9ca3af !important;
+}
+
+/* Cards */
+.info-card,
+.beneficio-card,
+.quick-card,
+.link-card,
+.kpi-card {
+  background: #1f2937 !important;
+  border-color: #374151 !important;
+}
+
+.info-card:hover,
+.beneficio-card:hover,
+.quick-card:hover,
+.link-card:hover {
+  border-color: #3b82f6 !important;
+}
+
+/* Tables */
+.table-container,
+.data-table {
+  background: #1f2937 !important;
+  border-color: #374151 !important;
+}
+
+.data-table th {
+  background: #374151 !important;
+  color: #9ca3af !important;
+  border-bottom-color: #4b5563 !important;
+}
+
+.data-table td {
+  color: #d1d5db !important;
+  border-bottom-color: #374151 !important;
+}
+
+.data-row:hover {
+  background: #374151 !important;
+}
+
+.person-name {
+  color: #f9fafb !important;
+}
+
+/* Tags */
+.tag {
+  background: #374151 !important;
+  color: #d1d5db !important;
+}
+
+.tag-cargo {
+  background: #1e3a5f !important;
+  color: #60a5fa !important;
+}
+
+.tag-unidade {
+  background: #312e81 !important;
+  color: #a5b4fc !important;
+}
+
+.categoria-tag {
+  background: #1e3a5f !important;
+  color: #60a5fa !important;
+}
+
+/* Filters */
+.filters {
+  border-bottom-color: #374151 !important;
+}
+
+.filter-btn {
+  background: #1f2937 !important;
+  border-color: #4b5563 !important;
+  color: #d1d5db !important;
+}
+
+.filter-btn:hover {
+  border-color: #3b82f6 !important;
+  color: #3b82f6 !important;
+}
+
+.filter-btn.active {
+  background: #3b82f6 !important;
+  border-color: #3b82f6 !important;
+  color: #fff !important;
+}
+
+/* Tabs */
+.tabs {
+  background: #1f2937 !important;
+  border-bottom-color: #374151 !important;
+}
+
+.tab {
+  color: #9ca3af !important;
+}
+
+.tab:hover {
+  color: #3b82f6 !important;
+}
+
+.tab.active {
+  color: #3b82f6 !important;
+  border-bottom-color: #3b82f6 !important;
+}
+
+/* Tab Content */
+.tab-content,
+.content-section {
+  background: transparent !important;
+}
+
+.article-content {
+  background: #1f2937 !important;
+  border-color: #374151 !important;
+}
+
+.article-content p,
+.article-content li {
+  color: #d1d5db !important;
+}
+
+.pilar-box {
+  background: #374151 !important;
+  border-left-color: #3b82f6 !important;
+}
+
+.atencao {
+  background: #422006 !important;
+  border-color: #f59e0b !important;
+  color: #fcd34d !important;
+}
+
+.destaque-box {
+  background: #1e3a5f !important;
+  border-color: #3b82f6 !important;
+}
+
+.estrategia {
+  background: #1f2937 !important;
+  border-color: #374151 !important;
+}
+
+.dica {
+  background: #064e3b !important;
+  border-left-color: #10b981 !important;
+  color: #6ee7b7 !important;
+}
+
+.aspectos-list {
+  background: #1f2937 !important;
+  border-color: #374151 !important;
+}
+
+.planejamento-box {
+  background: #3b82f6 !important;
+}
+
+.conclusao-box {
+  background: #374151 !important;
+  border-color: #4b5563 !important;
+}
+
+.disclaimer {
+  color: #6b7280 !important;
+  border-top-color: #374151 !important;
+}
+
+/* Links Grid */
+.links-grid .link-card {
+  background: #1f2937 !important;
+}
+
+.link-title {
+  color: #f9fafb !important;
+}
+
+.link-desc {
+  color: #9ca3af !important;
+}
+
+/* Simulador */
+.simulador-intro,
+.simulador-info {
+  background: #1f2937 !important;
+  border-color: #374151 !important;
+}
+
+.info-item {
+  background: #374151 !important;
+  border-color: #4b5563 !important;
+}
+
+.info-item .label {
+  color: #9ca3af !important;
+}
+
+.info-item .value {
+  color: #f9fafb !important;
+}
+
+/* Calendar / Ausencias */
+.calendar-container,
+.legenda-sidebar,
+.calendar-grid,
+.summary-section {
+  background: #1f2937 !important;
+  border-color: #374151 !important;
+}
+
+.calendar-header-row th {
+  background: #374151 !important;
+  color: #9ca3af !important;
+}
+
+.employee-row:hover {
+  background: #374151 !important;
+}
+
+.employee-name {
+  color: #f9fafb !important;
+}
+
+.employee-id {
+  color: #6b7280 !important;
+}
+
+/* Quick Access */
+.quick-access {
+  background: #1f2937 !important;
+  border-bottom-color: #374151 !important;
+}
+
+.quick-access h2 {
+  color: #f9fafb !important;
+}
+
+.quick-card span {
+  color: #d1d5db !important;
+}
+
+/* Info Section */
+.info-section .info-card h3 {
+  color: #f9fafb !important;
+}
+
+.info-section .info-card p {
+  color: #9ca3af !important;
+}
+
+.info-detail {
+  color: #60a5fa !important;
+}
+
+/* Dashboard */
+.dashboard-container {
+  background: #111827 !important;
+}
+
+.chart-container,
+.activity-feed,
+.events-section {
+  background: #1f2937 !important;
+  border-color: #374151 !important;
+}
+
+/* Status badges */
+.status-badge.active {
+  background: #064e3b !important;
+  color: #6ee7b7 !important;
+}
+
+.status-badge.inactive {
+  background: #7f1d1d !important;
+  color: #fca5a5 !important;
+}
+
+/* Buttons */
+.btn-action,
+.btn-detalhes,
+.btn-primary {
+  background: #3b82f6 !important;
+  color: #fff !important;
+}
+
+.btn-action:hover,
+.btn-detalhes:hover,
+.btn-primary:hover {
+  background: #2563eb !important;
+}
+
+.btn-voltar {
+  background: transparent !important;
+  border-color: #4b5563 !important;
+  color: #9ca3af !important;
+}
+
+.btn-voltar:hover {
+  border-color: #3b82f6 !important;
+  color: #3b82f6 !important;
+}
+
+/* Brand Selector */
+.brand-selector {
+  color: #d1d5db !important;
+}
+
+.brand-selector select {
+  background: #374151 !important;
+  border-color: #4b5563 !important;
+  color: #f9fafb !important;
+}
+
+/* Descriptions */
+.descricao,
+.card-info .label,
+.info-row .label {
+  color: #9ca3af !important;
+}
+
+.card-info .valor,
+.card-info .text,
+.info-row .valor,
+.info-row .text {
+  color: #d1d5db !important;
+}
+
+.nome {
+  color: #f9fafb !important;
+}
+
+.status.ativo {
+  color: #6ee7b7 !important;
+}
+
+/* Loading/Error states */
+.loading-state {
+  background: #1f2937 !important;
+  border-color: #374151 !important;
+}
+
+.error-state {
+  background: #1f2937 !important;
+  border-color: #374151 !important;
+}
+
+/* Total badge */
+.total-badge {
+  background: #374151 !important;
+  border-color: #4b5563 !important;
+  color: #d1d5db !important;
+}
+
+/* Beneficios Box */
+.beneficios-box {
+  background: #1f2937 !important;
+  border-color: #374151 !important;
+}
+
+.beneficios-box h3 {
+  color: #f9fafb !important;
+}
+
+.beneficios-box li {
+  color: #d1d5db !important;
+}
+
+/* Home Page */
+.home-container {
+  background: #111827 !important;
+}
+
+.hero-overlay {
+  background: linear-gradient(
+    90deg,
+    rgba(30, 58, 95, 0.97) 0%,
+    rgba(30, 58, 95, 0.85) 40%,
+    transparent 70%
+  ) !important;
+}
+
+.info-icon {
+  background: #1e3a5f !important;
+  color: #60a5fa !important;
+}
+
+/* People List */
+.people-list {
+  background: #111827 !important;
+}
+
+.toolbar {
+  border-bottom-color: #374151 !important;
+}
+
+.search-wrapper input {
+  background: #374151 !important;
+  border-color: #4b5563 !important;
+  color: #f9fafb !important;
+}
+
+.search-wrapper input::placeholder {
+  color: #6b7280 !important;
+}
+
+/* Icons in cards */
+.quick-icon {
+  background: #3b82f6 !important;
+}
+
+/* People Detail */
+.person-detail-card {
+  background: #1f2937 !important;
+  border-color: #374151 !important;
+}
+
+.detail-section {
+  border-bottom-color: #374151 !important;
+}
+
+.detail-label {
+  color: #9ca3af !important;
+}
+
+.detail-value {
+  color: #f9fafb !important;
+}
+
+/* Generic page containers */
+.page-container,
+.content-container {
+  background: #111827 !important;
+}
+
+/* Scroll customization */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1f2937;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4b5563;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+/* ===== PEOPLE DETAIL PAGE ===== */
+.detail-container {
+  background: #111827 !important;
+}
+
+.detail-container .header h1 {
+  color: #f9fafb !important;
+}
+
+.detail-container .card {
+  background: #1f2937 !important;
+  border-color: #374151 !important;
+}
+
+.detail-container .card-body {
+  background: #1f2937 !important;
+}
+
+.detail-container .info-row {
+  border-bottom-color: #374151 !important;
+}
+
+.detail-container .label {
+  color: #9ca3af !important;
+}
+
+.detail-container .value {
+  color: #f9fafb !important;
+}
+
+.detail-container .card-footer {
+  background: #374151 !important;
+}
+
+.detail-container .btn-secondary {
+  background: #4b5563 !important;
+  color: #f9fafb !important;
+  border-color: #4b5563 !important;
+}
+
+/* ===== BENEFICIOS PAGE DARK FIX ===== */
+.beneficios-container {
+  background: #111827 !important;
+}
+
+.beneficios-container .page-header h1 {
+  color: #f9fafb !important;
+}
+
+.beneficios-container .subtitle {
+  color: #9ca3af !important;
+}
+
+.beneficio-card {
+  background: #1f2937 !important;
+  border-color: #374151 !important;
+}
+
+.beneficio-card:hover {
+  border-color: #3b82f6 !important;
+}
+
+.beneficio-card .nome {
+  color: #f9fafb !important;
+}
+
+.beneficio-card .descricao {
+  color: #9ca3af !important;
+}
+
+.beneficio-card .info-row {
+  border-bottom-color: #374151 !important;
+}
+
+.beneficio-card .label {
+  color: #6b7280 !important;
+}
+
+.beneficio-card .valor,
+.beneficio-card .text {
+  color: #d1d5db !important;
+}
+
+.beneficio-card .card-footer {
+  border-top-color: #374151 !important;
+}
+
+.card-icon {
+  background: #1e3a5f !important;
+  color: #60a5fa !important;
+}
+
+/* ===== FUNCEF PAGE DARK FIX ===== */
+.funcef-container {
+  background: #111827 !important;
+}
+
+.funcef-container .page-header h1 {
+  color: #f9fafb !important;
+}
+
+.funcef-container .subtitle {
+  color: #9ca3af !important;
+}
+
+/* ===== HOME PAGE DARK FIX ===== */
+.quick-access {
+  background: #1f2937 !important;
+  border-bottom-color: #374151 !important;
+}
+
+.quick-access h2 {
+  color: #f9fafb !important;
+}
+
+.quick-card {
+  background: #374151 !important;
+  border-color: #4b5563 !important;
+}
+
+.quick-card:hover {
+  background: #1e3a5f !important;
+  border-color: #3b82f6 !important;
+}
+
+.quick-card span {
+  color: #f9fafb !important;
+}
+
+.info-section {
+  background: #111827 !important;
+}
+
+.info-card {
+  background: #1f2937 !important;
+  border-color: #374151 !important;
+}
+
+.info-card h3 {
+  color: #f9fafb !important;
+}
+
+.info-card p {
+  color: #9ca3af !important;
+}
+
+.info-detail {
+  color: #60a5fa !important;
+}
+
+.info-link {
+  background: #3b82f6 !important;
+  color: #fff !important;
+}
+
+.info-link:hover {
+  background: #2563eb !important;
+}
+
+/* ===== DASHBOARD PAGE DARK FIX ===== */
+.dashboard-container {
+  background: #111827 !important;
+}
+
+.kpi-card {
+  background: #1f2937 !important;
+  border-color: #374151 !important;
+}
+
+.kpi-card .label {
+  color: #9ca3af !important;
+}
+
+.kpi-card .value {
+  color: #f9fafb !important;
+}
+
+.chart-container {
+  background: #1f2937 !important;
+  border-color: #374151 !important;
+}
+
+/* ===== AUSENCIAS CALENDAR DARK FIX ===== */
+.ausencias-container,
+.calendar-container {
+  background: #111827 !important;
+}
+
+.calendar-header {
+  background: #1f2937 !important;
+  border-color: #374151 !important;
+  color: #f9fafb !important;
+}
+
+.calendar-grid {
+  background: #1f2937 !important;
+}
+
+.calendar-day {
+  background: #1f2937 !important;
+  border-color: #374151 !important;
+  color: #d1d5db !important;
+}
+
+.calendar-day.today {
+  border-color: #3b82f6 !important;
+  background: #1e3a5f !important;
+}
+
+.calendar-day-header {
+  color: #9ca3af !important;
+}
+
+.month-selector {
+  background: #1f2937 !important;
+  border-color: #374151 !important;
+  color: #f9fafb !important;
+}
+
+.employee-name {
+  color: #f9fafb !important;
+}
+
+.team-header {
+  background: #374151 !important;
+  color: #f9fafb !important;
+}
+
+.absence-legend {
+  background: #1f2937 !important;
+  border-color: #374151 !important;
+}
+
+.legend-item span {
+  color: #d1d5db !important;
+}
+
+/* Absence tables */
+.absence-table {
+  background: #1f2937 !important;
+  border-color: #374151 !important;
+}
+
+.absence-table th {
+  background: #374151 !important;
+  color: #9ca3af !important;
+  border-color: #4b5563 !important;
+}
+
+.absence-table td {
+  color: #d1d5db !important;
+  border-color: #374151 !important;
+}
+
+/* ===== PEOPLE LIST PAGE DARK FIX ===== */
+.people-container,
+.list-container {
+  background: #111827 !important;
+}
+
+.people-table th {
+  background: #374151 !important;
+  color: #9ca3af !important;
+}
+
+.people-table td {
+  color: #d1d5db !important;
+  border-color: #374151 !important;
+}
+
+.people-table tr:hover {
+  background: #374151 !important;
+}
+
+/* Welcome Page */
+.welcome-container {
+  background: #111827 !important;
+}
+
+/* ===== DASHBOARD COMPLETE FIX ===== */
+.dashboard {
+  background: #111827 !important;
+}
+
+.page-title {
+  color: #f9fafb !important;
+}
+
+.page-date {
+  color: #9ca3af !important;
+}
+
+.kpi-label {
+  color: #9ca3af !important;
+}
+
+.kpi-value {
+  color: #f9fafb !important;
+}
+
+.kpi-comparison {
+  color: #6b7280 !important;
+}
+
+.panel {
+  background: #1f2937 !important;
+  border-color: #374151 !important;
+}
+
+.panel-title {
+  color: #f9fafb !important;
+}
+
+.bar-label {
+  color: #d1d5db !important;
+}
+
+.bar-value {
+  color: #f9fafb !important;
+}
+
+.bar-track {
+  background: #374151 !important;
+}
+
+.status-value {
+  color: #f9fafb !important;
+}
+
+.status-label {
+  color: #9ca3af !important;
+}
+
+.activity-text {
+  color: #f9fafb !important;
+}
+
+.activity-meta {
+  color: #6b7280 !important;
+}
+
+.event-day {
+  color: #f9fafb !important;
+}
+
+.event-month {
+  color: #9ca3af !important;
+}
+
+.event-title {
+  color: #f9fafb !important;
+}
+
+.event-desc {
+  color: #9ca3af !important;
+}
+
+.action-btn {
+  background: #374151 !important;
+  border-color: #4b5563 !important;
+  color: #d1d5db !important;
+}
+
+.action-btn:hover {
+  background: #4b5563 !important;
+  color: #f9fafb !important;
+}
+
+/* ===== AUSENCIAS PAGE COMPLETE FIX ===== */
+.ausencias-page,
+.scale-container {
+  background: #111827 !important;
+}
+
+.filters-section {
+  background: #1f2937 !important;
+  border-color: #374151 !important;
+}
+
+.filter-label {
+  color: #9ca3af !important;
+}
+
+.filter-select,
+.month-select {
+  background: #374151 !important;
+  border-color: #4b5563 !important;
+  color: #f9fafb !important;
+}
+
+.legend-container,
+.legend-section {
+  background: #1f2937 !important;
+  border-color: #374151 !important;
+}
+
+.legend-title,
+.section-title {
+  color: #f9fafb !important;
+}
+
+.legend-text,
+.legend-label {
+  color: #d1d5db !important;
+}
+
+.scale-header {
+  background: #1f2937 !important;
+  border-color: #374151 !important;
+}
+
+.scale-title {
+  color: #f9fafb !important;
+}
+
+.scale-row {
+  background: #1f2937 !important;
+  border-color: #374151 !important;
+}
+
+.scale-row:hover {
+  background: #374151 !important;
+}
+
+.funcionario-nome,
+.employee-cell {
+  color: #f9fafb !important;
+}
+
+.day-number {
+  color: #d1d5db !important;
+}
+
+.day-header {
+  color: #9ca3af !important;
+  background: #374151 !important;
+}
+
+.table-cell {
+  border-color: #374151 !important;
+}
+
+.table-header {
+  background: #374151 !important;
+  color: #9ca3af !important;
+}
+
+.table-row:nth-child(even) {
+  background: #1f2937 !important;
+}
+
+.table-row:nth-child(odd) {
+  background: #111827 !important;
+}
+
+/* Legends sidebar */
+.sidebar-legends {
+  background: #1f2937 !important;
+  border-color: #374151 !important;
+}
+
+.sidebar-legends h3,
+.sidebar-legends h4 {
+  color: #f9fafb !important;
+}
+
+.sidebar-legends span {
+  color: #d1d5db !important;
+}
+
+/* Ausencias Hoje/Proximas Tables */
+.absence-section {
+  background: #1f2937 !important;
+  border-color: #374151 !important;
+}
+
+.absence-section h3 {
+  color: #f9fafb !important;
+}
+
+.absence-row {
+  border-color: #374151 !important;
+}
+
+.absence-row td {
+  color: #d1d5db !important;
+}
+
+.absence-row:hover {
+  background: #374151 !important;
+}
+
+/* ===== AUSENCIAS PAGE SPECIFIC CLASSES ===== */
+.ausencias-page {
+  background: #111827 !important;
+}
+
+.ausencias-page .page-title {
+  color: #3b82f6 !important;
+}
+
+.org-code {
+  color: #9ca3af !important;
+}
+
+.ausencias-layout {
+  background: #111827 !important;
+}
+
+.legenda-sidebar {
+  background: #1f2937 !important;
+  border-color: #374151 !important;
+}
+
+.legenda-title {
+  color: #9ca3af !important;
+}
+
+.legenda-nome {
+  color: #d1d5db !important;
+}
+
+.calendar-controls {
+  background: #1f2937 !important;
+  border-color: #374151 !important;
+}
+
+.calendar-controls label {
+  color: #9ca3af !important;
+}
+
+.month-display {
+  color: #f9fafb !important;
+}
+
+.nav-btn {
+  background: #374151 !important;
+  border-color: #4b5563 !important;
+  color: #d1d5db !important;
+}
+
+.nav-btn:hover {
+  background: #4b5563 !important;
+}
+
+.form-select {
+  background: #374151 !important;
+  border-color: #4b5563 !important;
+  color: #f9fafb !important;
+}
+
+.calendar-container {
+  background: #1f2937 !important;
+  border-color: #374151 !important;
+}
+
+.calendar-header {
+  background: #374151 !important;
+  border-color: #4b5563 !important;
+}
+
+.calendar-col {
+  color: #9ca3af !important;
+}
+
+.calendar-col.today {
+  background: #3b82f6 !important;
+  color: #fff !important;
+}
+
+.team-row {
+  background: #1e3a5f !important;
+}
+
+.team-name {
+  color: #f9fafb !important;
+}
+
+.employee-row {
+  background: #1f2937 !important;
+  border-color: #374151 !important;
+}
+
+.employee-row:hover {
+  background: #374151 !important;
+}
+
+.employee-name {
+  color: #f9fafb !important;
+}
+
+.day-cell {
+  border-color: #374151 !important;
+}
+
+/* Tabelas de ausencias hoje/proximas */
+.ausencias-tables {
+  background: #111827 !important;
+}
+
+.table-section {
+  background: #1f2937 !important;
+  border-color: #374151 !important;
+}
+
+.table-section h3 {
+  color: #f9fafb !important;
+}
+
+.data-table {
+  background: #1f2937 !important;
+}
+
+.data-table thead {
+  background: #374151 !important;
+}
+
+.data-table th {
+  color: #9ca3af !important;
+  border-color: #4b5563 !important;
+}
+
+.data-table td {
+  color: #d1d5db !important;
+  border-color: #374151 !important;
+}
+
+.data-table tbody tr:hover {
+  background: #374151 !important;
+}
+
+/* ===== CALENDAR GRID FIX ===== */
+.calendar-grid {
+  background: #1f2937 !important;
+  border-color: #374151 !important;
+}
+
+.calendar-grid .calendar-row {
+  background: #1f2937 !important;
+}
+
+.calendar-grid .calendar-cell {
+  background: #1f2937 !important;
+  border-color: #374151 !important;
+  color: #d1d5db !important;
+}
+
+.calendar-grid .calendar-cell:hover {
+  background: #374151 !important;
+}
+
+/* Summary section */
+.summary-section {
+  background: #1f2937 !important;
+  border-color: #374151 !important;
+}
+
+.summary-section h3 {
+  color: #f9fafb !important;
+}
+
+.summary-item {
+  background: #374151 !important;
+  border-color: #4b5563 !important;
+}
+
+.summary-item .label {
+  color: #9ca3af !important;
+}
+
+.summary-item .value {
+  color: #f9fafb !important;
+}
+
+/* Legenda items - ensure text is visible */
+.legenda-item {
+  color: #d1d5db !important;
+}
+
+.legenda-item .legenda-nome {
+  color: #d1d5db !important;
+}
+
+.legenda-section .legenda-title {
+  color: #f9fafb !important;
+}
+
+/* Calendar cells with absence colors - keep the background but ensure visibility */
+.calendar-cell[style*='background'] {
+  color: #fff !important;
+}
+
+/* Scale container */
+.scale-container {
+  background: #111827 !important;
+}
+
+.scale-header {
+  background: #374151 !important;
+  color: #f9fafb !important;
+}
+
+.scale-row {
+  background: #1f2937 !important;
+  border-color: #374151 !important;
+}
+
+.scale-row:hover {
+  background: #374151 !important;
+}
+
+.scale-cell {
+  border-color: #374151 !important;
+  color: #d1d5db !important;
+}
+
+/* ===== FOOTER FIX ===== */
+.footer {
+  background: #1f2937 !important;
+  border-top: 1px solid #374151 !important;
+  color: #9ca3af !important;
+  position: relative !important;
+  z-index: 100 !important;
+  flex-shrink: 0 !important;
+}
+
+.footer__left,
+.footer__right {
+  color: #9ca3af !important;
+}
+
+.footer__separator {
+  color: #4b5563 !important;
+}
+
+/* ===== PRETENSÃO LEGEND FIX ===== */
+/* The "Pretensão" legend item has very light background - ensure text is dark */
+.legenda-item .legenda-cor[style*='rgb(248, 249, 250)'] + .legenda-nome {
+  color: #1f2937 !important;
+}
+
+/* All legend names should be visible in dark mode */
+.legenda-sidebar .legenda-section .legenda-item .legenda-nome,
+.legenda-sidebar .legenda-item span:not(.legenda-cor) {
+  color: #d1d5db !important;
+}
+
+/* Ensure calendar area is properly styled */
+.calendar-area {
+  background: #1f2937 !important;
+  border-color: #374151 !important;
+}
+
+.calendar-area .calendar-header {
+  background: #374151 !important;
+}
+
+.calendar-area .employee-row {
+  background: #1f2937 !important;
+}
+
+.calendar-area .employee-row:nth-child(even) {
+  background: #111827 !important;
+}
+
+/* Month navigation */
+.month-nav,
+.calendar-navigation {
+  background: #1f2937 !important;
+}
+
+.month-nav button,
+.calendar-navigation button {
+  background: #374151 !important;
+  border-color: #4b5563 !important;
+  color: #d1d5db !important;
+}
+
+.month-nav button:hover,
+.calendar-navigation button:hover {
+  background: #4b5563 !important;
+}
+
+/* Days header row */
+.days-header,
+.calendar-days-header {
+  background: #374151 !important;
+  color: #9ca3af !important;
+}
+
+.days-header .day,
+.calendar-days-header .day {
+  color: #9ca3af !important;
+}
+
+/* Weekend styling */
+.weekend {
+  background: #111827 !important;
+}
+
+/* Today highlight */
+.today-col,
+.calendar-col.today {
+  background: #3b82f6 !important;
+  color: #fff !important;
+}
+
+/* Tooltip for absence details */
+.absence-tooltip {
+  background: #374151 !important;
+  border-color: #4b5563 !important;
+  color: #f9fafb !important;
+}
+
+/* Page container padding fix for footer visibility */
+.ausencias-page,
+.ausencias-container {
+  min-height: calc(100vh - 120px) !important;
+  padding-bottom: 16px !important;
 }

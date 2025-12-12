@@ -1,0 +1,35 @@
+<button
+  [type]="type"
+  [disabled]="disabled"
+  [attr.aria-label]="ariaLabel || label"
+  (click)="onClick($event)"
+  class="dsc-button__element"
+>
+  <span
+    *ngIf="iconPrefix"
+    [class]="materialIconClass"
+    class="dsc-button__icon dsc-button__icon--prefix"
+  >
+    {{ iconPrefix }}
+  </span>
+
+  <span
+    *ngIf="icon && iconButton"
+    [class]="materialIconClass"
+    class="dsc-button__icon"
+  >
+    {{ icon }}
+  </span>
+
+  <span *ngIf="label && !iconButton" class="dsc-button__label">
+    {{ label }}
+  </span>
+
+  <span
+    *ngIf="iconSuffix"
+    [class]="materialIconClass"
+    class="dsc-button__icon dsc-button__icon--suffix"
+  >
+    {{ iconSuffix }}
+  </span>
+</button>

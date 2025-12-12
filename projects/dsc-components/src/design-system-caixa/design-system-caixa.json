@@ -1,0 +1,105 @@
+{
+  "name": "Design System CAIXA (DSC)",
+  "version": "1.0.0",
+  "description": "Sistema de design oficial da CAIXA Econômica Federal",
+  "metadata": {
+    "source": "Doc3.pdf (62 páginas)",
+    "extractionDate": "2024",
+    "implementation": "Angular + CSS Custom Properties"
+  },
+
+  "tokens": {
+    "colors": {
+      "fixed": {
+        "primary": ["130", "110", "90", "70", "50", "30", "10"],
+        "secondary": ["130", "110", "90", "70", "50", "30", "10"],
+        "tertiary": ["130", "110", "90", "70", "50", "30", "10"],
+        "grayscale": ["130", "110", "90", "70", "50", "30", "10", "white"]
+      },
+      "flexible": ["ceu", "uva", "limao", "tangerina", "goiaba"],
+      "feedback": ["positive", "negative", "attention", "informative"],
+      "gradients": [
+        "oceano",
+        "gelo",
+        "ceu",
+        "uva",
+        "limao",
+        "tangerina",
+        "goiaba"
+      ]
+    },
+    "spacing": {
+      "scale": [0, 4, 8, 12, 16, 24, 32, 40, 48, 56, 64, 72, 80, 120, 160],
+      "tokens": [
+        "none",
+        "quark",
+        "nano",
+        "micro",
+        "tiny",
+        "smaller",
+        "small",
+        "medium",
+        "large",
+        "larger",
+        "big",
+        "bigger",
+        "huge",
+        "giant",
+        "enormous"
+      ]
+    },
+    "typography": {
+      "family": "CAIXA Std, Arial, sans-serif",
+      "sizes": [
+        "quark",
+        "nano",
+        "micro",
+        "tiny",
+        "smaller",
+        "small",
+        "medium",
+        "large",
+        "larger",
+        "big",
+        "bigger",
+        "huge",
+        "giant"
+      ],
+      "weights": [400, 600, 700],
+      "lineHeights": ["tight", "near", "medium", "distant", "farther"]
+    },
+    "borders": {
+      "widths": ["none", "hairline", "thin", "thick", "heavy", "strong"],
+      "radius": [
+        "none",
+        "quark",
+        "nano",
+        "small",
+        "medium",
+        "large",
+        "big",
+        "pill"
+      ]
+    },
+    "shadows": {
+      "elevations": [0, 1, 2, 3, 4, 5]
+    }
+  },
+
+  "components": {
+    "buttons": ["primary", "secondary", "tertiary", "text"],
+    "forms": ["input", "select", "textarea", "checkbox", "radio"],
+    "feedback": ["alert", "badge", "spinner", "tooltip"],
+    "grid": {
+      "columns": 12,
+      "breakpoints": ["xs", "sm", "md", "lg", "xl"]
+    }
+  },
+
+  "usage": {
+    "import": "@import 'design-system-caixa/index.css'",
+    "cssVariables": true,
+    "utilities": true,
+    "responsive": true
+  }
+}

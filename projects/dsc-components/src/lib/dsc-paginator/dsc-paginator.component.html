@@ -1,0 +1,74 @@
+<div class="dsc-paginator" [class.dsc-paginator--disabled]="disabledPaginator">
+  <div class="dsc-paginator__container">
+    <!-- Page size selector -->
+    <div class="dsc-paginator__page-size">
+      <label class="dsc-paginator__label" for="page-size-select"
+        >Itens por página:</label
+      >
+      <select
+        id="page-size-select"
+        class="dsc-paginator__select"
+        [value]="pageSize"
+        (change)="changePageSize(+$any($event.target).value)"
+        [disabled]="disabledPaginator"
+        aria-label="Selecionar número de itens por página"
+      >
+        <option *ngFor="let size of pageSizeOptions" [value]="size">
+          {{ size }}
+        </option>
+      </select>
+    </div>
+
+    <!-- Range label -->
+    <div *ngIf="!hidePaginatorRangeLabel" class="dsc-paginator__range-label">
+      {{ rangeLabel }}
+    </div>
+
+    <!-- Navigation buttons -->
+    <div class="dsc-paginator__navigation">
+      <button
+        class="dsc-paginator__button"
+        [disabled]="!canGoFirst"
+        (click)="goToFirstPage()"
+        title="Primeira página"
+        aria-label="Primeira página"
+      >
+        <span class="material-icons">first_page</span>
+      </button>
+
+      <button
+        class="dsc-paginator__button"
+        [disabled]="!canGoPrevious"
+        (click)="goToPreviousPage()"
+        title="Página anterior"
+        aria-label="Página anterior"
+      >
+        <span class="material-icons">chevron_left</span>
+      </button>
+
+      <span class="dsc-paginator__current">
+        Página {{ pageIndex + 1 }} de {{ totalPages }}
+      </span>
+
+      <button
+        class="dsc-paginator__button"
+        [disabled]="!canGoNext"
+        (click)="goToNextPage()"
+        title="Próxima página"
+        aria-label="Próxima página"
+      >
+        <span class="material-icons">chevron_right</span>
+      </button>
+
+      <button
+        class="dsc-paginator__button"
+        [disabled]="!canGoLast"
+        (click)="goToLastPage()"
+        title="Última página"
+        aria-label="Última página"
+      >
+        <span class="material-icons">last_page</span>
+      </button>
+    </div>
+  </div>
+</div>

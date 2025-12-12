@@ -1,0 +1,134 @@
+// Design System CAIXA - Paleta de Feedback usando tokens oficiais
+:host {
+  --alert-success-bg: var(--color-feedback-positive-10, #e7f4ea);
+  --alert-success-border: var(--color-feedback-positive-70, #179231);
+  --alert-success-text: var(--color-feedback-positive-130, #093a14);
+  --alert-success-icon: var(--color-feedback-positive-70, #179231);
+
+  --alert-danger-bg: var(--color-feedback-negative-10, #fbebeb);
+  --alert-danger-border: var(--color-feedback-negative-70, #d93636);
+  --alert-danger-text: var(--color-feedback-negative-130, #661a1a);
+  --alert-danger-icon: var(--color-feedback-negative-70, #d93636);
+
+  --alert-warning-bg: var(--color-feedback-attention-10, #fff9e6);
+  --alert-warning-border: var(--color-feedback-attention-70, #fcbe05);
+  --alert-warning-text: var(--color-feedback-attention-130, #654c02);
+  --alert-warning-icon: var(--color-feedback-attention-70, #fcbe05);
+
+  --alert-info-bg: var(--color-feedback-informative-10, #e5f6f8);
+  --alert-info-border: var(--color-feedback-informative-70, #04a2bf);
+  --alert-info-text: var(--color-feedback-informative-130, #02414c);
+  --alert-info-icon: var(--color-feedback-informative-70, #04a2bf);
+}
+
+.dsc-alert {
+  border-radius: var(--border-radius-nano);
+  padding: var(--spacing-tiny);
+  margin: var(--spacing-tiny) 0;
+  border-left: var(--border-width-thick) solid;
+  font-family: var(--font-family-primary);
+
+  &__container {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-micro);
+  }
+
+  &__icon {
+    font-size: 24px;
+    flex-shrink: 0;
+    margin-top: var(--spacing-quark);
+    line-height: 1;
+  }
+
+  &__content {
+    flex: 1;
+  }
+
+  &__title {
+    margin: 0 0 var(--spacing-nano) 0;
+    font-size: var(--font-size-micro);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height-near);
+  }
+
+  &__message {
+    margin: 0;
+    font-size: var(--font-size-nano);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-distant);
+
+    ::ng-deep a {
+      color: inherit;
+      text-decoration: underline;
+      font-weight: var(--font-weight-semibold);
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      &:focus-visible {
+        outline: var(--border-width-thin) solid currentColor;
+        outline-offset: var(--spacing-quark);
+        border-radius: var(--border-radius-quark);
+      }
+    }
+  }
+
+  &__list {
+    margin: 0;
+    padding-left: var(--spacing-smaller);
+    font-size: var(--font-size-nano);
+    line-height: var(--line-height-distant);
+
+    li {
+      margin-bottom: var(--spacing-quark);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // Variants - Paleta de Feedback CAIXA
+  &--success {
+    background-color: var(--alert-success-bg);
+    border-left-color: var(--alert-success-border);
+    color: var(--alert-success-text);
+
+    .dsc-alert__icon {
+      color: var(--alert-success-icon);
+    }
+  }
+
+  &--danger {
+    background-color: var(--alert-danger-bg);
+    border-left-color: var(--alert-danger-border);
+    color: var(--alert-danger-text);
+
+    .dsc-alert__icon {
+      color: var(--alert-danger-icon);
+    }
+  }
+
+  &--warning {
+    background-color: var(--alert-warning-bg);
+    border-left-color: var(--alert-warning-border);
+    color: var(--alert-warning-text);
+
+    .dsc-alert__icon {
+      color: var(--alert-warning-icon);
+    }
+  }
+
+  &--info {
+    background-color: var(--alert-info-bg);
+    border-left-color: var(--alert-info-border);
+    color: var(--alert-info-text);
+
+    .dsc-alert__icon {
+      color: var(--alert-info-icon);
+    }
+  }
+}

@@ -1,0 +1,201 @@
+/* ===========================================
+   DESIGN SYSTEM CAIXA - TOKENS DE CORES
+   =========================================== */
+
+:root {
+  /* ========== PALETA FIXA ========== */
+
+  /* Azul CAIXA (Primary) */
+  --color-primary-130: #002a4d;
+  --color-primary-110: #00437a;
+  --color-primary-90: #005ca9;
+  --color-primary-70: #2d8ad8;
+  --color-primary-50: #6dbafa;
+  --color-primary-30: #a0d2fc;
+  --color-primary-10: #e5f1fc;
+
+  /* Laranja CAIXA (Secondary) */
+  --color-secondary-130: #663a00;
+  --color-secondary-110: #a65e00;
+  --color-secondary-90: #d87b00;
+  --color-secondary-70: #f39200;
+  --color-secondary-50: #fdb548;
+  --color-secondary-30: #ffd392;
+  --color-secondary-10: #ffefd6;
+
+  /* Turquesa (Tertiary) */
+  --color-tertiary-130: #034538;
+  --color-tertiary-110: #216e62;
+  --color-tertiary-90: #359485;
+  --color-tertiary-70: #54bbab;
+  --color-tertiary-50: #81d6c8;
+  --color-tertiary-30: #b9ebe3;
+  --color-tertiary-10: #e4f7f4;
+
+  /* Cinza (Grayscale) */
+  --color-gray-130: #22292e;
+  --color-gray-110: #404852;
+  --color-gray-90: #64747a;
+  --color-gray-70: #9eb2b8;
+  --color-gray-50: #d0e0e3;
+  --color-gray-30: #ebf1f2;
+  --color-gray-10: #f7fafa;
+  --color-white: #ffffff;
+
+  /* ========== PALETA FLEXÍVEL ========== */
+
+  /* Céu */
+  --color-flex-ceu-130: #003c4d;
+  --color-flex-ceu-110: #006480;
+  --color-flex-ceu-90: #008cb2;
+  --color-flex-ceu-70: #00b4e6;
+  --color-flex-ceu-50: #2ec8f3;
+  --color-flex-ceu-30: #6edbfa;
+  --color-flex-ceu-10: #d0f5ff;
+
+  /* Uva */
+  --color-flex-uva-130: #4f213f;
+  --color-flex-uva-110: #753c61;
+  --color-flex-uva-90: #93537d;
+  --color-flex-uva-70: #b26f9b;
+  --color-flex-uva-50: #ce97bb;
+  --color-flex-uva-30: #eac9de;
+  --color-flex-uva-10: #f8eaf3;
+
+  /* Limão */
+  --color-flex-limao-130: #465200;
+  --color-flex-limao-110: #6d8000;
+  --color-flex-limao-90: #99b103;
+  --color-flex-limao-70: #afca0b;
+  --color-flex-limao-50: #c5de31;
+  --color-flex-limao-30: #def06d;
+  --color-flex-limao-10: #f5fec1;
+
+  /* Tangerina */
+  --color-flex-tangerina-130: #664800;
+  --color-flex-tangerina-110: #996c00;
+  --color-flex-tangerina-90: #d19400;
+  --color-flex-tangerina-70: #f9b000;
+  --color-flex-tangerina-50: #fac546;
+  --color-flex-tangerina-30: #fcdd92;
+  --color-flex-tangerina-10: #fff3d6;
+
+  /* Goiaba */
+  --color-flex-goiaba-130: #801905;
+  --color-flex-goiaba-110: #b23820;
+  --color-flex-goiaba-90: #d85b3f;
+  --color-flex-goiaba-70: #ef765e;
+  --color-flex-goiaba-50: #f79481;
+  --color-flex-goiaba-30: #fcbdb0;
+  --color-flex-goiaba-10: #ffeae5;
+
+  /* ========== PALETA FEEDBACK ========== */
+
+  /* Positive (Sucesso) */
+  --color-feedback-positive-130: #093a14;
+  --color-feedback-positive-110: #0d581c;
+  --color-feedback-positive-90: #127527;
+  --color-feedback-positive-70: #179231;
+  --color-feedback-positive-50: #5cb26e;
+  --color-feedback-positive-30: #a2d3ad;
+  --color-feedback-positive-10: #e7f4ea;
+
+  /* Attention (Atenção) */
+  --color-feedback-attention-130: #654c02;
+  --color-feedback-attention-110: #977203;
+  --color-feedback-attention-90: #ca9804;
+  --color-feedback-attention-70: #fcbe05;
+  --color-feedback-attention-50: #fdd150;
+  --color-feedback-attention-30: #fee59b;
+  --color-feedback-attention-10: #fff9e6;
+
+  /* Negative (Erro) */
+  --color-feedback-negative-130: #661a1a;
+  --color-feedback-negative-110: #8c2323;
+  --color-feedback-negative-90: #b22c2c;
+  --color-feedback-negative-70: #d93636;
+  --color-feedback-negative-50: #e47272;
+  --color-feedback-negative-30: #f0afaf;
+  --color-feedback-negative-10: #fbebeb;
+
+  /* Informative (Informação) */
+  --color-feedback-informative-130: #02414c;
+  --color-feedback-informative-110: #026173;
+  --color-feedback-informative-90: #038299;
+  --color-feedback-informative-70: #04a2bf;
+  --color-feedback-informative-50: #4fbed2;
+  --color-feedback-informative-30: #9bdae5;
+  --color-feedback-informative-10: #e5f6f8;
+
+  /* ========== GRADIENTES ========== */
+  --gradient-oceano: linear-gradient(180deg, #005c49 0%, #548bab 100%);
+  --gradient-gelo: linear-gradient(180deg, #f1f1f1 0%, #d0e0e3 100%);
+  --gradient-ceu: linear-gradient(45deg, #005c49 0%, #6085e3 100%);
+  --gradient-uva: linear-gradient(45deg, #005c49 0%, #8249f0 100%);
+  --gradient-limao: linear-gradient(
+    45deg,
+    #005c49 0%,
+    #548bab 60%,
+    #afc68b 100%
+  );
+  --gradient-tangerina: linear-gradient(
+    45deg,
+    #005c49 0%,
+    #606c49 75%,
+    #548bab 60%,
+    #498b00 100%
+  );
+  --gradient-goiaba: linear-gradient(
+    45deg,
+    #005c49 0%,
+    #61745e 65%,
+    #617428 100%
+  );
+  --gradient-agua: linear-gradient(45deg, #548bab 0%, #6085e3 100%);
+  --gradient-primavera: linear-gradient(45deg, #548bab 0%, #8269f0 100%);
+  --gradient-inverno: linear-gradient(45deg, #548bab 0%, #afc68b 100%);
+  --gradient-verao: linear-gradient(45deg, #548bab 0%, #498b00 100%);
+  --gradient-outono: linear-gradient(45deg, #548bab 0%, #61745e 100%);
+}
+
+/* Classes utilitárias de cores */
+.bg-primary-90 {
+  background-color: var(--color-primary-90);
+}
+.bg-secondary-70 {
+  background-color: var(--color-secondary-70);
+}
+.bg-tertiary-70 {
+  background-color: var(--color-tertiary-70);
+}
+.bg-gray-50 {
+  background-color: var(--color-gray-50);
+}
+
+.text-primary-90 {
+  color: var(--color-primary-90);
+}
+.text-secondary-70 {
+  color: var(--color-secondary-70);
+}
+.text-gray-130 {
+  color: var(--color-gray-130);
+}
+.text-white {
+  color: var(--color-white);
+}
+
+.border-primary-90 {
+  border-color: var(--color-primary-90);
+}
+.border-gray-30 {
+  border-color: var(--color-gray-30);
+}
+
+/* Classes de gradientes */
+.bg-gradient-oceano {
+  background: var(--gradient-oceano);
+}
+.bg-gradient-gelo {
+  background: var(--gradient-gelo);
+}

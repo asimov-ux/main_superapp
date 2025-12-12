@@ -1,0 +1,52 @@
+/* ===========================================
+   DESIGN SYSTEM CAIXA - SISTEMA DE GRID
+   =========================================== */
+
+.dsc-container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--spacing-medium);
+  padding-right: var(--spacing-medium);
+}
+
+.dsc-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--spacing-medium);
+}
+
+.dsc-col-1 {
+  grid-column: span 1;
+}
+.dsc-col-2 {
+  grid-column: span 2;
+}
+.dsc-col-3 {
+  grid-column: span 3;
+}
+.dsc-col-4 {
+  grid-column: span 4;
+}
+.dsc-col-6 {
+  grid-column: span 6;
+}
+.dsc-col-12 {
+  grid-column: span 12;
+}
+
+@media (max-width: 575px) {
+  .dsc-container {
+    padding-left: var(--spacing-small);
+    padding-right: var(--spacing-small);
+  }
+  .dsc-grid-xs {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .dsc-container {
+    max-width: 1200px;
+  }
+}

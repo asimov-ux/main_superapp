@@ -3,5 +3,6 @@
   "dest": "../../dist/ui-tokens",
   "lib": {
     "entryFile": "src/public-api.ts"
-  }
+  },
+  "allowedNonPeerDependencies": ["rxjs"]
 }

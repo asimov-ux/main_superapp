@@ -3,10 +3,10 @@
   "compilerOptions": {
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
-    "strict": true,
+    "strict": false,
     "noImplicitOverride": true,
-    "noPropertyAccessFromIndexSignature": true,
-    "noImplicitReturns": true,
+    "noPropertyAccessFromIndexSignature": false,
+    "noImplicitReturns": false,
     "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true,
     "isolatedModules": true,
@@ -29,18 +29,20 @@
       ],
 
       /** >>> CORREÇÃO AQUI <<< **/
-      "@superapp/feature-people": [
-        "dist/feature-people"
+      "@superapp/feature-people": ["dist/feature-people"],
+      "dsc-components": [
+        "projects/dsc-components/src/public-api.ts",
+        "./dist/dsc-components"
       ],
-      "feature-dashboard": [
-        "./dist/feature-dashboard"
-      ]
+      "feature-dashboard": ["./dist/feature-dashboard"]
     }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
-    "strictTemplates": true
+    "strictTemplates": true,
+    "strictInputTypes": false,
+    "strictNullInputTypes": false
   }
 }

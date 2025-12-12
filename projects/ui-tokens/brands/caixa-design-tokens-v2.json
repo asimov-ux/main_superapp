@@ -1,0 +1,977 @@
+{
+  "$schema": "../schema/contract.schema.json",
+  "brand": {
+    "id": "caixa-v2",
+    "name": "Caixa Econômica Federal",
+    "version": "2.0.0"
+  },
+  "color": {
+    "primary": {
+      "130": {
+        "$type": "color",
+        "$value": "#002A4D",
+        "$description": "Azul CAIXA 130"
+      },
+      "110": {
+        "$type": "color",
+        "$value": "#00437A",
+        "$description": "Azul CAIXA 110"
+      },
+      "90": {
+        "$type": "color",
+        "$value": "#005CA9",
+        "$description": "Azul CAIXA 90 - Cor principal"
+      },
+      "70": {
+        "$type": "color",
+        "$value": "#2D8AD8",
+        "$description": "Azul CAIXA 70"
+      },
+      "50": {
+        "$type": "color",
+        "$value": "#6DBAFA",
+        "$description": "Azul CAIXA 50"
+      },
+      "30": {
+        "$type": "color",
+        "$value": "#A0D2FC",
+        "$description": "Azul CAIXA 30"
+      },
+      "10": {
+        "$type": "color",
+        "$value": "#E5F1FC",
+        "$description": "Azul CAIXA 10"
+      }
+    },
+    "secondary": {
+      "130": {
+        "$type": "color",
+        "$value": "#663A00",
+        "$description": "Laranja CAIXA 130"
+      },
+      "110": {
+        "$type": "color",
+        "$value": "#A65E00",
+        "$description": "Laranja CAIXA 110"
+      },
+      "90": {
+        "$type": "color",
+        "$value": "#D87B00",
+        "$description": "Laranja CAIXA 90"
+      },
+      "70": {
+        "$type": "color",
+        "$value": "#F39200",
+        "$description": "Laranja CAIXA 70 - Cor secundária"
+      },
+      "50": {
+        "$type": "color",
+        "$value": "#FDB548",
+        "$description": "Laranja CAIXA 50"
+      },
+      "30": {
+        "$type": "color",
+        "$value": "#FFD392",
+        "$description": "Laranja CAIXA 30"
+      },
+      "10": {
+        "$type": "color",
+        "$value": "#FFEFD6",
+        "$description": "Laranja CAIXA 10"
+      }
+    },
+    "tertiary": {
+      "130": {
+        "$type": "color",
+        "$value": "#034538",
+        "$description": "Turquesa CAIXA 130"
+      },
+      "110": {
+        "$type": "color",
+        "$value": "#216E62",
+        "$description": "Turquesa CAIXA 110"
+      },
+      "90": {
+        "$type": "color",
+        "$value": "#359485",
+        "$description": "Turquesa CAIXA 90"
+      },
+      "70": {
+        "$type": "color",
+        "$value": "#54BBAB",
+        "$description": "Turquesa CAIXA 70 - Cor terciária"
+      },
+      "50": {
+        "$type": "color",
+        "$value": "#81D6C8",
+        "$description": "Turquesa CAIXA 50"
+      },
+      "30": {
+        "$type": "color",
+        "$value": "#B9EBE3",
+        "$description": "Turquesa CAIXA 30"
+      },
+      "10": {
+        "$type": "color",
+        "$value": "#E4F7F4",
+        "$description": "Turquesa CAIXA 10"
+      }
+    },
+    "gray": {
+      "130": {
+        "$type": "color",
+        "$value": "#22292E",
+        "$description": "Cinza 130"
+      },
+      "110": {
+        "$type": "color",
+        "$value": "#404852",
+        "$description": "Cinza 110"
+      },
+      "90": {
+        "$type": "color",
+        "$value": "#64747A",
+        "$description": "Cinza 90"
+      },
+      "70": {
+        "$type": "color",
+        "$value": "#9EB2B8",
+        "$description": "Cinza 70"
+      },
+      "50": {
+        "$type": "color",
+        "$value": "#D0E0E3",
+        "$description": "Cinza 50"
+      },
+      "30": {
+        "$type": "color",
+        "$value": "#EBF1F2",
+        "$description": "Cinza 30"
+      },
+      "10": {
+        "$type": "color",
+        "$value": "#F7FAFA",
+        "$description": "Cinza 10"
+      }
+    },
+    "white": {
+      "$type": "color",
+      "$value": "#FFFFFF",
+      "$description": "Branco"
+    },
+    "flexible": {
+      "ceu": {
+        "130": {
+          "$type": "color",
+          "$value": "#003C4D",
+          "$description": "Céu 130"
+        },
+        "110": {
+          "$type": "color",
+          "$value": "#006480",
+          "$description": "Céu 110"
+        },
+        "90": {
+          "$type": "color",
+          "$value": "#008CB2",
+          "$description": "Céu 90"
+        },
+        "70": {
+          "$type": "color",
+          "$value": "#00B4E6",
+          "$description": "Céu 70"
+        },
+        "50": {
+          "$type": "color",
+          "$value": "#2EC8F3",
+          "$description": "Céu 50"
+        },
+        "30": {
+          "$type": "color",
+          "$value": "#6EDBFA",
+          "$description": "Céu 30"
+        },
+        "10": {
+          "$type": "color",
+          "$value": "#D0F5FF",
+          "$description": "Céu 10"
+        }
+      },
+      "uva": {
+        "130": {
+          "$type": "color",
+          "$value": "#4F213F",
+          "$description": "Uva 130"
+        },
+        "110": {
+          "$type": "color",
+          "$value": "#753C61",
+          "$description": "Uva 110"
+        },
+        "90": {
+          "$type": "color",
+          "$value": "#93537D",
+          "$description": "Uva 90"
+        },
+        "70": {
+          "$type": "color",
+          "$value": "#B26F9B",
+          "$description": "Uva 70"
+        },
+        "50": {
+          "$type": "color",
+          "$value": "#CE97BB",
+          "$description": "Uva 50"
+        },
+        "30": {
+          "$type": "color",
+          "$value": "#EAC9DE",
+          "$description": "Uva 30"
+        },
+        "10": {
+          "$type": "color",
+          "$value": "#F8EAF3",
+          "$description": "Uva 10"
+        }
+      },
+      "limao": {
+        "130": {
+          "$type": "color",
+          "$value": "#465200",
+          "$description": "Limão 130"
+        },
+        "110": {
+          "$type": "color",
+          "$value": "#6D8000",
+          "$description": "Limão 110"
+        },
+        "90": {
+          "$type": "color",
+          "$value": "#99B103",
+          "$description": "Limão 90"
+        },
+        "70": {
+          "$type": "color",
+          "$value": "#AFCA0B",
+          "$description": "Limão 70"
+        },
+        "50": {
+          "$type": "color",
+          "$value": "#C5DE31",
+          "$description": "Limão 50"
+        },
+        "30": {
+          "$type": "color",
+          "$value": "#DEF06D",
+          "$description": "Limão 30"
+        },
+        "10": {
+          "$type": "color",
+          "$value": "#F5FEC1",
+          "$description": "Limão 10"
+        }
+      },
+      "tangerina": {
+        "130": {
+          "$type": "color",
+          "$value": "#664800",
+          "$description": "Tangerina 130"
+        },
+        "110": {
+          "$type": "color",
+          "$value": "#996C00",
+          "$description": "Tangerina 110"
+        },
+        "90": {
+          "$type": "color",
+          "$value": "#D19400",
+          "$description": "Tangerina 90"
+        },
+        "70": {
+          "$type": "color",
+          "$value": "#F9B000",
+          "$description": "Tangerina 70"
+        },
+        "50": {
+          "$type": "color",
+          "$value": "#FAC546",
+          "$description": "Tangerina 50"
+        },
+        "30": {
+          "$type": "color",
+          "$value": "#FCDD92",
+          "$description": "Tangerina 30"
+        },
+        "10": {
+          "$type": "color",
+          "$value": "#FFF3D6",
+          "$description": "Tangerina 10"
+        }
+      },
+      "goiaba": {
+        "130": {
+          "$type": "color",
+          "$value": "#801905",
+          "$description": "Goiaba 130"
+        },
+        "110": {
+          "$type": "color",
+          "$value": "#B23820",
+          "$description": "Goiaba 110"
+        },
+        "90": {
+          "$type": "color",
+          "$value": "#D85B3F",
+          "$description": "Goiaba 90"
+        },
+        "70": {
+          "$type": "color",
+          "$value": "#EF765E",
+          "$description": "Goiaba 70"
+        },
+        "50": {
+          "$type": "color",
+          "$value": "#F79481",
+          "$description": "Goiaba 50"
+        },
+        "30": {
+          "$type": "color",
+          "$value": "#FCBDB0",
+          "$description": "Goiaba 30"
+        },
+        "10": {
+          "$type": "color",
+          "$value": "#FFEAE5",
+          "$description": "Goiaba 10"
+        }
+      }
+    },
+    "feedback": {
+      "positive": {
+        "130": {
+          "$type": "color",
+          "$value": "#093A14",
+          "$description": "Positive 130"
+        },
+        "110": {
+          "$type": "color",
+          "$value": "#0D581C",
+          "$description": "Positive 110"
+        },
+        "90": {
+          "$type": "color",
+          "$value": "#127527",
+          "$description": "Positive 90"
+        },
+        "70": {
+          "$type": "color",
+          "$value": "#179231",
+          "$description": "Positive 70 - Sucesso"
+        },
+        "50": {
+          "$type": "color",
+          "$value": "#5CB26E",
+          "$description": "Positive 50"
+        },
+        "30": {
+          "$type": "color",
+          "$value": "#A2D3AD",
+          "$description": "Positive 30"
+        },
+        "10": {
+          "$type": "color",
+          "$value": "#E7F4EA",
+          "$description": "Positive 10"
+        }
+      },
+      "attention": {
+        "130": {
+          "$type": "color",
+          "$value": "#654C02",
+          "$description": "Attention 130"
+        },
+        "110": {
+          "$type": "color",
+          "$value": "#977203",
+          "$description": "Attention 110"
+        },
+        "90": {
+          "$type": "color",
+          "$value": "#CA9804",
+          "$description": "Attention 90"
+        },
+        "70": {
+          "$type": "color",
+          "$value": "#FCBE05",
+          "$description": "Attention 70 - Atenção"
+        },
+        "50": {
+          "$type": "color",
+          "$value": "#FDD150",
+          "$description": "Attention 50"
+        },
+        "30": {
+          "$type": "color",
+          "$value": "#FEE59B",
+          "$description": "Attention 30"
+        },
+        "10": {
+          "$type": "color",
+          "$value": "#FFF9E6",
+          "$description": "Attention 10"
+        }
+      },
+      "negative": {
+        "130": {
+          "$type": "color",
+          "$value": "#661A1A",
+          "$description": "Negative 130"
+        },
+        "110": {
+          "$type": "color",
+          "$value": "#8C2323",
+          "$description": "Negative 110"
+        },
+        "90": {
+          "$type": "color",
+          "$value": "#B22C2C",
+          "$description": "Negative 90"
+        },
+        "70": {
+          "$type": "color",
+          "$value": "#D93636",
+          "$description": "Negative 70 - Erro"
+        },
+        "50": {
+          "$type": "color",
+          "$value": "#E47272",
+          "$description": "Negative 50"
+        },
+        "30": {
+          "$type": "color",
+          "$value": "#F0AFAF",
+          "$description": "Negative 30"
+        },
+        "10": {
+          "$type": "color",
+          "$value": "#FBEBEB",
+          "$description": "Negative 10"
+        }
+      },
+      "informative": {
+        "130": {
+          "$type": "color",
+          "$value": "#02414C",
+          "$description": "Informative 130"
+        },
+        "110": {
+          "$type": "color",
+          "$value": "#026173",
+          "$description": "Informative 110"
+        },
+        "90": {
+          "$type": "color",
+          "$value": "#038299",
+          "$description": "Informative 90"
+        },
+        "70": {
+          "$type": "color",
+          "$value": "#04A2BF",
+          "$description": "Informative 70 - Informação"
+        },
+        "50": {
+          "$type": "color",
+          "$value": "#4FBED2",
+          "$description": "Informative 50"
+        },
+        "30": {
+          "$type": "color",
+          "$value": "#9BDAE5",
+          "$description": "Informative 30"
+        },
+        "10": {
+          "$type": "color",
+          "$value": "#E5F6F8",
+          "$description": "Informative 10"
+        }
+      }
+    },
+    "background": {
+      "primary": {
+        "$type": "color",
+        "$value": "#FFFFFF",
+        "$description": "Fundo principal"
+      },
+      "secondary": {
+        "$type": "color",
+        "$value": "#F5F5F5",
+        "$description": "Fundo secundário"
+      },
+      "tertiary": {
+        "$type": "color",
+        "$value": "#E0E0E0",
+        "$description": "Fundo terciário"
+      }
+    },
+    "text": {
+      "primary": {
+        "$type": "color",
+        "$value": "#212121",
+        "$description": "Texto principal"
+      },
+      "secondary": {
+        "$type": "color",
+        "$value": "#757575",
+        "$description": "Texto secundário"
+      },
+      "disabled": {
+        "$type": "color",
+        "$value": "#BDBDBD",
+        "$description": "Texto desabilitado"
+      },
+      "inverse": {
+        "$type": "color",
+        "$value": "#FFFFFF",
+        "$description": "Texto invertido"
+      }
+    },
+    "border": {
+      "default": {
+        "$type": "color",
+        "$value": "#BDBDBD",
+        "$description": "Borda padrão"
+      },
+      "focus": {
+        "$type": "color",
+        "$value": "#005CA9",
+        "$description": "Borda em foco"
+      },
+      "error": {
+        "$type": "color",
+        "$value": "#D93636",
+        "$description": "Borda de erro"
+      }
+    },
+    "hover": {
+      "primary": {
+        "$type": "color",
+        "$value": "#2D8AD8",
+        "$description": "Hover primário (Azul 70)"
+      },
+      "secondary": {
+        "$type": "color",
+        "$value": "#FDB548",
+        "$description": "Hover secundário (Laranja 50)"
+      }
+    },
+    "active": {
+      "primary": {
+        "$type": "color",
+        "$value": "#00437A",
+        "$description": "Active primário (Azul 110)"
+      },
+      "secondary": {
+        "$type": "color",
+        "$value": "#D87B00",
+        "$description": "Active secundário (Laranja 90)"
+      }
+    },
+    "disabled": {
+      "background": {
+        "$type": "color",
+        "$value": "#E0E0E0",
+        "$description": "Fundo desabilitado"
+      },
+      "text": {
+        "$type": "color",
+        "$value": "#9E9E9E",
+        "$description": "Texto desabilitado"
+      }
+    }
+  },
+  "gradient": {
+    "oceano": {
+      "$type": "string",
+      "$value": "linear-gradient(180deg, #005C49 0%, #548BAB 100%)",
+      "$description": "Gradiente Oceano"
+    },
+    "gelo": {
+      "$type": "string",
+      "$value": "linear-gradient(180deg, #F1F1F1 0%, #D0E0E3 100%)",
+      "$description": "Gradiente Gelo"
+    },
+    "ceu": {
+      "$type": "string",
+      "$value": "linear-gradient(45deg, #005C49 0%, #6085E3 100%)",
+      "$description": "Gradiente Céu"
+    },
+    "uva": {
+      "$type": "string",
+      "$value": "linear-gradient(45deg, #005C49 0%, #8249F0 100%)",
+      "$description": "Gradiente Uva"
+    },
+    "limao": {
+      "$type": "string",
+      "$value": "linear-gradient(45deg, #005C49 0%, #548BAB 60%, #AFC68B 100%)",
+      "$description": "Gradiente Limão"
+    },
+    "tangerina": {
+      "$type": "string",
+      "$value": "linear-gradient(45deg, #005C49 0%, #606C49 75%, #548BAB 60%, #498B00 100%)",
+      "$description": "Gradiente Tangerina"
+    },
+    "goiaba": {
+      "$type": "string",
+      "$value": "linear-gradient(45deg, #005C49 0%, #61745E 65%, #617428 100%)",
+      "$description": "Gradiente Goiaba"
+    },
+    "agua": {
+      "$type": "string",
+      "$value": "linear-gradient(45deg, #548BAB 0%, #6085E3 100%)",
+      "$description": "Gradiente Água"
+    },
+    "primavera": {
+      "$type": "string",
+      "$value": "linear-gradient(45deg, #548BAB 0%, #8269F0 100%)",
+      "$description": "Gradiente Primavera"
+    },
+    "inverno": {
+      "$type": "string",
+      "$value": "linear-gradient(45deg, #548BAB 0%, #AFC68B 100%)",
+      "$description": "Gradiente Inverno"
+    },
+    "verao": {
+      "$type": "string",
+      "$value": "linear-gradient(45deg, #548BAB 0%, #498B00 100%)",
+      "$description": "Gradiente Verão"
+    },
+    "outono": {
+      "$type": "string",
+      "$value": "linear-gradient(45deg, #548BAB 0%, #61745E 100%)",
+      "$description": "Gradiente Outono"
+    }
+  },
+  "typography": {
+    "fontFamily": {
+      "base": {
+        "$type": "fontFamily",
+        "$value": ["Roboto", "Arial", "Helvetica", "sans-serif"],
+        "$description": "Família de fonte principal"
+      }
+    },
+    "fontSize": {
+      "xs": {
+        "$type": "dimension",
+        "$value": "0.75rem",
+        "$description": "12px"
+      },
+      "sm": {
+        "$type": "dimension",
+        "$value": "0.875rem",
+        "$description": "14px"
+      },
+      "md": { "$type": "dimension", "$value": "1rem", "$description": "16px" },
+      "lg": {
+        "$type": "dimension",
+        "$value": "1.125rem",
+        "$description": "18px"
+      },
+      "xl": {
+        "$type": "dimension",
+        "$value": "1.25rem",
+        "$description": "20px"
+      },
+      "2xl": {
+        "$type": "dimension",
+        "$value": "1.5rem",
+        "$description": "24px"
+      },
+      "3xl": {
+        "$type": "dimension",
+        "$value": "1.875rem",
+        "$description": "30px"
+      }
+    },
+    "fontWeight": {
+      "light": {
+        "$type": "fontWeight",
+        "$value": "300",
+        "$description": "Peso leve"
+      },
+      "regular": {
+        "$type": "fontWeight",
+        "$value": "400",
+        "$description": "Peso normal"
+      },
+      "medium": {
+        "$type": "fontWeight",
+        "$value": "500",
+        "$description": "Peso médio"
+      },
+      "semibold": {
+        "$type": "fontWeight",
+        "$value": "600",
+        "$description": "Semi-negrito"
+      },
+      "bold": {
+        "$type": "fontWeight",
+        "$value": "700",
+        "$description": "Negrito"
+      }
+    },
+    "lineHeight": {
+      "tight": {
+        "$type": "dimension",
+        "$value": "1.25",
+        "$description": "Altura compacta"
+      },
+      "normal": {
+        "$type": "dimension",
+        "$value": "1.5",
+        "$description": "Altura normal"
+      },
+      "relaxed": {
+        "$type": "dimension",
+        "$value": "1.75",
+        "$description": "Altura relaxada"
+      }
+    }
+  },
+  "spacing": {
+    "xs": { "$type": "dimension", "$value": "0.25rem", "$description": "4px" },
+    "sm": { "$type": "dimension", "$value": "0.5rem", "$description": "8px" },
+    "md": { "$type": "dimension", "$value": "1rem", "$description": "16px" },
+    "lg": { "$type": "dimension", "$value": "1.5rem", "$description": "24px" },
+    "xl": { "$type": "dimension", "$value": "2rem", "$description": "32px" },
+    "2xl": { "$type": "dimension", "$value": "3rem", "$description": "48px" }
+  },
+  "borderRadius": {
+    "none": {
+      "$type": "dimension",
+      "$value": "0",
+      "$description": "Sem arredondamento"
+    },
+    "sm": { "$type": "dimension", "$value": "0.25rem", "$description": "4px" },
+    "md": { "$type": "dimension", "$value": "0.5rem", "$description": "8px" },
+    "lg": { "$type": "dimension", "$value": "0.75rem", "$description": "12px" },
+    "full": {
+      "$type": "dimension",
+      "$value": "9999px",
+      "$description": "Círculo"
+    }
+  },
+  "shadow": {
+    "sm": {
+      "$type": "shadow",
+      "$value": {
+        "offsetX": "0",
+        "offsetY": "1px",
+        "blur": "2px",
+        "spread": "0",
+        "color": "rgba(0, 0, 0, 0.05)"
+      },
+      "$description": "Sombra pequena"
+    },
+    "md": {
+      "$type": "shadow",
+      "$value": {
+        "offsetX": "0",
+        "offsetY": "2px",
+        "blur": "8px",
+        "spread": "0",
+        "color": "rgba(0, 0, 0, 0.1)"
+      },
+      "$description": "Sombra média"
+    },
+    "lg": {
+      "$type": "shadow",
+      "$value": {
+        "offsetX": "0",
+        "offsetY": "4px",
+        "blur": "16px",
+        "spread": "0",
+        "color": "rgba(0, 0, 0, 0.15)"
+      },
+      "$description": "Sombra grande"
+    },
+    "xl": {
+      "$type": "shadow",
+      "$value": {
+        "offsetX": "0",
+        "offsetY": "8px",
+        "blur": "24px",
+        "spread": "0",
+        "color": "rgba(0, 0, 0, 0.2)"
+      },
+      "$description": "Sombra extra grande"
+    }
+  },
+  "elevation": {
+    "level1": {
+      "$type": "shadow",
+      "$value": {
+        "offsetX": "0",
+        "offsetY": "1px",
+        "blur": "3px",
+        "spread": "0",
+        "color": "rgba(0, 0, 0, 0.12)"
+      },
+      "$description": "Material Design 3 - Level 1"
+    },
+    "level2": {
+      "$type": "shadow",
+      "$value": {
+        "offsetX": "0",
+        "offsetY": "2px",
+        "blur": "6px",
+        "spread": "2px",
+        "color": "rgba(0, 0, 0, 0.15)"
+      },
+      "$description": "Material Design 3 - Level 2"
+    },
+    "level3": {
+      "$type": "shadow",
+      "$value": {
+        "offsetX": "0",
+        "offsetY": "4px",
+        "blur": "8px",
+        "spread": "3px",
+        "color": "rgba(0, 0, 0, 0.15)"
+      },
+      "$description": "Material Design 3 - Level 3"
+    },
+    "level4": {
+      "$type": "shadow",
+      "$value": {
+        "offsetX": "0",
+        "offsetY": "6px",
+        "blur": "10px",
+        "spread": "4px",
+        "color": "rgba(0, 0, 0, 0.15)"
+      },
+      "$description": "Material Design 3 - Level 4"
+    },
+    "level5": {
+      "$type": "shadow",
+      "$value": {
+        "offsetX": "0",
+        "offsetY": "8px",
+        "blur": "12px",
+        "spread": "6px",
+        "color": "rgba(0, 0, 0, 0.15)"
+      },
+      "$description": "Material Design 3 - Level 5"
+    }
+  },
+  "motion": {
+    "duration": {
+      "fast": {
+        "$type": "duration",
+        "$value": "150ms",
+        "$description": "Transições rápidas"
+      },
+      "base": {
+        "$type": "duration",
+        "$value": "250ms",
+        "$description": "Transições padrão"
+      },
+      "slow": {
+        "$type": "duration",
+        "$value": "400ms",
+        "$description": "Transições lentas"
+      }
+    },
+    "easing": {
+      "standard": {
+        "$type": "easing",
+        "$value": "cubic-bezier(0.4, 0.0, 0.2, 1)",
+        "$description": "Easing padrão"
+      },
+      "enter": {
+        "$type": "easing",
+        "$value": "cubic-bezier(0.0, 0.0, 0.2, 1)",
+        "$description": "Easing entrada"
+      },
+      "exit": {
+        "$type": "easing",
+        "$value": "cubic-bezier(0.4, 0.0, 1, 1)",
+        "$description": "Easing saída"
+      }
+    }
+  },
+  "button": {
+    "padding": {
+      "small": {
+        "$type": "dimension",
+        "$value": "0.5rem 1rem",
+        "$description": "Padding pequeno"
+      },
+      "standard": {
+        "$type": "dimension",
+        "$value": "0.75rem 1.5rem",
+        "$description": "Padding padrão"
+      },
+      "large": {
+        "$type": "dimension",
+        "$value": "1rem 2rem",
+        "$description": "Padding grande"
+      }
+    },
+    "fontSize": {
+      "small": {
+        "$type": "dimension",
+        "$value": "0.875rem",
+        "$description": "14px"
+      },
+      "standard": {
+        "$type": "dimension",
+        "$value": "1rem",
+        "$description": "16px"
+      },
+      "large": {
+        "$type": "dimension",
+        "$value": "1.125rem",
+        "$description": "18px"
+      }
+    },
+    "borderRadius": {
+      "$type": "dimension",
+      "$value": "0.25rem",
+      "$description": "4px"
+    }
+  },
+  "input": {
+    "padding": {
+      "$type": "dimension",
+      "$value": "0.75rem 1rem",
+      "$description": "Padding"
+    },
+    "borderRadius": {
+      "$type": "dimension",
+      "$value": "0.25rem",
+      "$description": "4px"
+    },
+    "borderWidth": {
+      "$type": "dimension",
+      "$value": "1px",
+      "$description": "Largura borda"
+    }
+  },
+  "table": {
+    "headerBackground": {
+      "$type": "color",
+      "$value": "#B3D9FF",
+      "$description": "Azul claro - Cabeçalho"
+    },
+    "rowHover": {
+      "$type": "color",
+      "$value": "#F5F5F5",
+      "$description": "Cinza claro - Hover"
+    },
+    "rowHeight": {
+      "$type": "dimension",
+      "$value": "64px",
+      "$description": "Altura linha"
+    }
+  }
+}

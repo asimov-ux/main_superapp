@@ -1,0 +1,60 @@
+/* ===========================================
+   DESIGN SYSTEM CAIXA - TOKENS DE BORDAS E SOMBRAS
+   =========================================== */
+
+:root {
+  /* ========== BORDAS - ESPESSURAS ========== */
+  --border-width-none: 0px;
+  --border-width-hairline: 1px;
+  --border-width-thin: 2px;
+  --border-width-thick: 4px;
+  --border-width-heavy: 8px;
+  --border-width-strong: 12px;
+
+  /* ========== BORDAS - RAIO ========== */
+  --border-radius-none: 0px;
+  --border-radius-quark: 2px;
+  --border-radius-nano: 4px;
+  --border-radius-small: 8px;
+  --border-radius-medium: 12px;
+  --border-radius-large: 16px;
+  --border-radius-big: 24px;
+  --border-radius-pill: 1000px;
+
+  /* ========== SOMBRAS (Material Design 3) ========== */
+  --shadow-elevation-0: none;
+  --shadow-elevation-1: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  --shadow-elevation-2: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+  --shadow-elevation-3: 0px 3px 3px -2px rgba(0, 0, 0, 0.2),
+    0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12);
+  --shadow-elevation-4: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+  --shadow-elevation-5: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+    0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12);
+}
+
+/* Classes utilitárias */
+.rounded-nano {
+  border-radius: var(--border-radius-nano);
+}
+.rounded-small {
+  border-radius: var(--border-radius-small);
+}
+.rounded-medium {
+  border-radius: var(--border-radius-medium);
+}
+.rounded-pill {
+  border-radius: var(--border-radius-pill);
+}
+
+.shadow-elevation-1 {
+  box-shadow: var(--shadow-elevation-1);
+}
+.shadow-elevation-2 {
+  box-shadow: var(--shadow-elevation-2);
+}
+.shadow-elevation-3 {
+  box-shadow: var(--shadow-elevation-3);
+}

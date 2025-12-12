@@ -1,44 +1,164 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "BrandTokensContract",
+  "version": "2.0.0",
   "type": "object",
-  "required": ["brandId", "properties"],
+  "required": ["brand", "color", "typography", "spacing"],
   "properties": {
-    "brandId": {
-      "type": "string",
-      "minLength": 1
-    },
-    "properties": {
+    "brand": {
       "type": "object",
+      "required": ["name", "version"],
       "properties": {
-        "colors": {
+        "name": { "type": "string", "minLength": 1 },
+        "version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" }
+      }
+    },
+    "color": {
+      "type": "object",
+      "required": ["primary", "secondary"],
+      "properties": {
+        "primary": { "$ref": "#/definitions/colorToken" },
+        "primaryLight": { "$ref": "#/definitions/colorToken" },
+        "primaryDark": { "$ref": "#/definitions/colorToken" },
+        "secondary": { "$ref": "#/definitions/colorToken" },
+        "secondaryLight": { "$ref": "#/definitions/colorToken" },
+        "secondaryDark": { "$ref": "#/definitions/colorToken" },
+        "tertiary": { "$ref": "#/definitions/colorToken" },
+        "success": { "$ref": "#/definitions/colorToken" },
+        "danger": { "$ref": "#/definitions/colorToken" },
+        "warning": { "$ref": "#/definitions/colorToken" },
+        "info": { "$ref": "#/definitions/colorToken" },
+        "background": {
           "type": "object",
           "properties": {
-            "primary": { "type": "string" },
-            "secondary": { "type": "string" },
-            "background": { "type": "string" },
-            "surface": { "type": "string" }
-          },
-          "required": ["primary"]
-        },
-        "typography": {
-          "type": "object",
-          "properties": {
-            "fontFamily": { "type": "string" },
-            "size": {
-              "type": "object",
-              "properties": {
-                "sm": { "type": "string" },
-                "md": { "type": "string" },
-                "lg": { "type": "string" }
-              }
-            }
+            "primary": { "$ref": "#/definitions/colorToken" },
+            "secondary": { "$ref": "#/definitions/colorToken" },
+            "tertiary": { "$ref": "#/definitions/colorToken" }
           }
         },
+        "text": {
+          "type": "object",
+          "properties": {
+            "primary": { "$ref": "#/definitions/colorToken" },
+            "secondary": { "$ref": "#/definitions/colorToken" },
+            "disabled": { "$ref": "#/definitions/colorToken" },
+            "inverse": { "$ref": "#/definitions/colorToken" }
+          }
+        },
+        "border": {
+          "type": "object",
+          "properties": {
+            "default": { "$ref": "#/definitions/colorToken" },
+            "focus": { "$ref": "#/definitions/colorToken" },
+            "error": { "$ref": "#/definitions/colorToken" }
+          }
+        },
+        "hover": {
+          "type": "object",
+          "properties": {
+            "primary": { "$ref": "#/definitions/colorToken" },
+            "secondary": { "$ref": "#/definitions/colorToken" }
+          }
+        },
+        "active": {
+          "type": "object",
+          "properties": {
+            "primary": { "$ref": "#/definitions/colorToken" },
+            "secondary": { "$ref": "#/definitions/colorToken" }
+          }
+        },
+        "disabled": {
+          "type": "object",
+          "properties": {
+            "background": { "$ref": "#/definitions/colorToken" },
+            "text": { "$ref": "#/definitions/colorToken" }
+          }
+        }
+      }
+    },
+    "typography": {
+      "type": "object",
+      "required": ["fontFamily", "fontSize", "fontWeight", "lineHeight"],
+      "properties": {
+        "fontFamily": {
+          "type": "object",
+          "properties": {
+            "base": { "$ref": "#/definitions/fontFamilyToken" }
+          }
+        },
+        "fontSize": {
+          "type": "object",
+          "properties": {
+            "xs": { "$ref": "#/definitions/dimensionToken" },
+            "sm": { "$ref": "#/definitions/dimensionToken" },
+            "md": { "$ref": "#/definitions/dimensionToken" },
+            "lg": { "$ref": "#/definitions/dimensionToken" },
+            "xl": { "$ref": "#/definitions/dimensionToken" },
+            "2xl": { "$ref": "#/definitions/dimensionToken" },
+            "3xl": { "$ref": "#/definitions/dimensionToken" }
+          }
+        },
+        "fontWeight": {
+          "type": "object",
+          "properties": {
+            "light": { "$ref": "#/definitions/fontWeightToken" },
+            "regular": { "$ref": "#/definitions/fontWeightToken" },
+            "medium": { "$ref": "#/definitions/fontWeightToken" },
+            "semibold": { "$ref": "#/definitions/fontWeightToken" },
+            "bold": { "$ref": "#/definitions/fontWeightToken" }
+          }
+        },
+        "lineHeight": {
+          "type": "object",
+          "properties": {
+            "tight": { "$ref": "#/definitions/dimensionToken" },
+            "normal": { "$ref": "#/definitions/dimensionToken" },
+            "relaxed": { "$ref": "#/definitions/dimensionToken" }
+          }
+        }
+      }
+    },
+    "spacing": {
+      "type": "object",
+      "required": ["xs", "sm", "md", "lg", "xl"],
+      "properties": {
+        "xs": { "$ref": "#/definitions/dimensionToken" },
+        "sm": { "$ref": "#/definitions/dimensionToken" },
+        "md": { "$ref": "#/definitions/dimensionToken" },
+        "lg": { "$ref": "#/definitions/dimensionToken" },
+        "xl": { "$ref": "#/definitions/dimensionToken" },
+        "2xl": { "$ref": "#/definitions/dimensionToken" }
+      }
+    },
+    "borderRadius": {
+      "type": "object",
+      "required": ["none", "sm", "md", "lg"],
+      "properties": {
+        "none": { "$ref": "#/definitions/dimensionToken" },
+        "sm": { "$ref": "#/definitions/dimensionToken" },
+        "md": { "$ref": "#/definitions/dimensionToken" },
+        "lg": { "$ref": "#/definitions/dimensionToken" },
+        "xl": { "$ref": "#/definitions/dimensionToken" },
+        "full": { "$ref": "#/definitions/dimensionToken" }
+      }
+    },
+    "shadow": {
+      "type": "object",
+      "properties": {
+        "sm": { "$ref": "#/definitions/shadowToken" },
+        "md": { "$ref": "#/definitions/shadowToken" },
+        "lg": { "$ref": "#/definitions/shadowToken" },
+        "xl": { "$ref": "#/definitions/shadowToken" }
+      }
+    },
         "elevation": {
           "type": "object",
           "properties": {
-            "lg": { "type": "string" }
+            "level1": { "$ref": "#/definitions/shadowToken" },
+            "level2": { "$ref": "#/definitions/shadowToken" },
+            "level3": { "$ref": "#/definitions/shadowToken" },
+            "level4": { "$ref": "#/definitions/shadowToken" },
+            "level5": { "$ref": "#/definitions/shadowToken" }
           }
         },
         "motion": {
@@ -47,18 +167,124 @@
             "duration": {
               "type": "object",
               "properties": {
-                "fast": { "type": "string" },
-                "base": { "type": "string" },
-                "slow": { "type": "string" }
+                "fast": { "$ref": "#/definitions/durationToken" },
+                "base": { "$ref": "#/definitions/durationToken" },
+                "slow": { "$ref": "#/definitions/durationToken" }
+              }
+            },
+            "easing": {
+              "type": "object",
+              "properties": {
+                "standard": { "$ref": "#/definitions/easingToken" },
+                "enter": { "$ref": "#/definitions/easingToken" },
+                "exit": { "$ref": "#/definitions/easingToken" }
               }
             }
           }
         },
-        "density": {
+        "button": {
           "type": "object",
           "properties": {
-            "mode": { "type": "string" }
+            "padding": {
+              "type": "object",
+              "properties": {
+                "small": { "$ref": "#/definitions/dimensionToken" },
+                "standard": { "$ref": "#/definitions/dimensionToken" },
+                "large": { "$ref": "#/definitions/dimensionToken" }
+              }
+            },
+            "fontSize": {
+              "type": "object",
+              "properties": {
+                "small": { "$ref": "#/definitions/dimensionToken" },
+                "standard": { "$ref": "#/definitions/dimensionToken" },
+                "large": { "$ref": "#/definitions/dimensionToken" }
+              }
+            },
+            "borderRadius": { "$ref": "#/definitions/dimensionToken" }
           }
+        },
+        "input": {
+          "type": "object",
+          "properties": {
+            "padding": { "$ref": "#/definitions/dimensionToken" },
+            "borderRadius": { "$ref": "#/definitions/dimensionToken" },
+            "borderWidth": { "$ref": "#/definitions/dimensionToken" }
+          }
+        }
+      }
+    },
+    "definitions": {
+      "colorToken": {
+        "type": "object",
+        "required": ["$type", "$value"],
+        "properties": {
+          "$type": { "const": "color" },
+          "$value": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$|^rgba?\\(" },
+          "$description": { "type": "string" }
+        }
+      },
+      "dimensionToken": {
+        "type": "object",
+        "required": ["$type", "$value"],
+        "properties": {
+          "$type": { "const": "dimension" },
+          "$value": { "type": "string" },
+          "$description": { "type": "string" }
+        }
+      },
+      "fontFamilyToken": {
+        "type": "object",
+        "required": ["$type", "$value"],
+        "properties": {
+          "$type": { "const": "fontFamily" },
+          "$value": { "type": "array", "items": { "type": "string" } },
+          "$description": { "type": "string" }
+        }
+      },
+      "fontWeightToken": {
+        "type": "object",
+        "required": ["$type", "$value"],
+        "properties": {
+          "$type": { "const": "fontWeight" },
+          "$value": { "type": "string" },
+          "$description": { "type": "string" }
+        }
+      },
+      "shadowToken": {
+        "type": "object",
+        "required": ["$type", "$value"],
+        "properties": {
+          "$type": { "const": "shadow" },
+          "$value": { 
+            "type": "object",
+            "properties": {
+              "offsetX": { "type": "string" },
+              "offsetY": { "type": "string" },
+              "blur": { "type": "string" },
+              "spread": { "type": "string" },
+              "color": { "type": "string" }
+            }
+          },
+          "$description": { "type": "string" }
+        }
+      },
+      "durationToken": {
+        "type": "object",
+        "required": ["$type", "$value"],
+        "properties": {
+          "$type": { "const": "duration" },
+          "$value": { "type": "string", "pattern": "^\\d+m?s$" },
+          "$description": { "type": "string" }
+        }
+      },
+      "easingToken": {
+        "type": "object",
+        "required": ["$type", "$value"],
+        "properties": {
+          "$type": { "const": "easing" },
+          "$value": { "type": "string" },
+          "$description": { "type": "string" }
         }
       }
     }
